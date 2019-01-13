@@ -5040,6 +5040,32 @@ gatsby-cli@^2.4.7:
     yargs "^11.1.0"
     yurnalist "^1.0.2"
 
+gatsby-cli@^2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.8.tgz#6f02e5076e1710aade0ad8e7524b1ec2cf2ee76f"
+  integrity sha512-YmS+eYSInI+E9/NrZ3p9Z0WWHIojbnei/ZpD9GhbtVFNDfl9qvv3reK05GekoAwQzLw5cMkiw7ur6WosqqCiHg==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
+    bluebird "^3.5.0"
+    common-tags "^1.4.0"
+    convert-hrtime "^2.0.0"
+    core-js "^2.5.0"
+    envinfo "^5.8.1"
+    execa "^0.8.0"
+    fs-exists-cached "^1.0.0"
+    fs-extra "^4.0.1"
+    hosted-git-info "^2.6.0"
+    lodash "^4.17.10"
+    opentracing "^0.14.3"
+    pretty-error "^2.1.1"
+    resolve-cwd "^2.0.0"
+    source-map "^0.5.7"
+    stack-trace "^0.0.10"
+    update-notifier "^2.3.0"
+    yargs "^11.1.0"
+    yurnalist "^1.0.2"
+
 gatsby-image@^2.0.20:
   version "2.0.25"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.25.tgz#30547589701db4c4c3e954609201fce2103ec8de"

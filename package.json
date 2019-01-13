@@ -30,6 +30,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
+    "gatsby-cli": "^2.4.8",
     "gatsby-plugin-sass": "^2.0.7",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2"
