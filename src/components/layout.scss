@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Serif:400,400i');
 
 $orange: #ffc300;
+$black: #000;
 
-$navbar_width: 180px;
+$navbar_width: 195px;
 $navbar_margin: 30px;
 
 html {
@@ -54,6 +55,11 @@ a {
   border-bottom: 3px solid $orange;
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    color: $orange !important;
+    background-color: $black;
+  }
 
   &:active {
     color: $orange;
@@ -260,15 +266,11 @@ img {
     }
   }
 
-  @media only screen and (min-width: 1080px) {
+  @media only screen and (min-width: 1120px) {
     position: absolute;
     width: $navbar_width;
     left: 0 - ($navbar_width + $navbar_margin);
     flex-direction: column;
-
-    .nav_item {
-
-    }
   }
 }
 h1 {
