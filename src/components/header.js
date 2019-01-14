@@ -1,6 +1,9 @@
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+
+import { PlayerContextConsumer } from '@cassette/core';
+import { MediaPlayerControls, MediaProgressDisplay } from '@cassette/player';
 
 import { maxWidth } from './constants';
 
@@ -22,16 +25,29 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'inherit',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: 'inherit',
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+        <MediaPlayerControls controls={['playpause', 'forwardskip']} />
+      </div>
+      <PlayerContextConsumer>
+        {({ paused }) =>
+          <div
+            className={'media_progress_wrapper' + (paused ? ' hidden' : '')}
+            onClick={() => navigate('/music')}
+          >
+            <MediaProgressDisplay />
+          </div>
+        }
+      </PlayerContextConsumer>
     </div>
   </div>
 )

@@ -777,6 +777,31 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@cassette/components@^2.0.0-alpha.15":
+  version "2.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/@cassette/components/-/components-2.0.0-alpha.15.tgz#03c4ae63106f10dc200a7536dd0afad3c8de9ba9"
+  integrity sha512-vJtVbhxSJkNYMcuVQpG/EZAsnBl+zjIQL+M98L8NpVj+5jyISK/uzWfJHuYT3CwOT+js6I/OQK7Sykgwz6+DSA==
+  dependencies:
+    "@cassette/core" "^2.0.0-alpha.15"
+    prop-types "^15.5.10"
+    resize-observer-polyfill "^1.4.2"
+
+"@cassette/core@^2.0.0-alpha.15":
+  version "2.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/@cassette/core/-/core-2.0.0-alpha.15.tgz#3d27b31dee89358b94b861f641770904ca8787b1"
+  integrity sha512-PvwDM8025sZsEl156gBhhJgmHI5eKJNle9WKnGGCMlUYUD2QWUmYe0OFKosbXxNZYJm0IUtsEDFXxmjVPi+oKA==
+  dependencies:
+    prop-types "^15.5.10"
+
+"@cassette/player@^2.0.0-alpha.15":
+  version "2.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/@cassette/player/-/player-2.0.0-alpha.15.tgz#2a73572c4910b4a0aa31f5acdf9e7cee3b22102b"
+  integrity sha512-osQevkijCKUgWLImX1aNqNFAKa/8SkhS/oCAhElyYelh5EYh+QUCF3jjk5hhUzLlT2wwi3Iyk8T2LcZ7HCQn7A==
+  dependencies:
+    "@cassette/components" "^2.0.0-alpha.15"
+    "@cassette/core" "^2.0.0-alpha.15"
+    prop-types "^15.5.10"
+
 "@moocar/lokijs@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@moocar/lokijs/-/lokijs-1.0.1.tgz#545227c173030dd0e6b1e6bdcef528012a6c325c"
@@ -9167,7 +9192,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   integrity sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==
@@ -9809,6 +9834,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+
+resize-observer-polyfill@^1.4.2:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"

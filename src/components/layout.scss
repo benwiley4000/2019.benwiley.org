@@ -683,3 +683,48 @@ figure figcaption {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-style: italic;
 }
+
+
+$cassette_base_bg_color: transparent;
+$cassette_btn_bg_color: $black;
+@import '~@cassette/player/src/styles/shared';
+@import '~@cassette/player/src/styles/MediaPlayer';
+@import '~@cassette/player/src/styles/PlayPauseButton';
+@import '~@cassette/player/src/styles/SkipButton';
+
+.cassette__control_bar {
+  flex-wrap: wrap; // was: warp-reverse;
+}
+
+.media_progress_wrapper {
+  margin-top: 0.5rem;
+  max-height: 30px;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+
+  &.hidden {
+    max-height: 0;
+  }
+}
+
+.cassette__media_progress_container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.cassette__media_status_bar {
+  display: flex;
+}
+
+.cassette__media_info_marquee {
+  flex-grow: 1;
+}
+
+.cassette__media_progress_bar {
+  height: 2px;
+  background-color: $black;
+
+  .progress {
+    background-color: $orange;
+  }
+}
