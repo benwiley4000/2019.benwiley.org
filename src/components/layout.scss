@@ -705,26 +705,74 @@ $cassette_btn_bg_color: $black;
   &.hidden {
     max-height: 0;
   }
+
+  .cassette__media_progress_container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .cassette__media_status_bar {
+    display: flex;
+  }
+
+  .cassette__media_info_marquee {
+    flex-grow: 1;
+  }
+
+  .cassette__media_progress_bar {
+    height: 2px;
+    background-color: $black;
+
+    .progress {
+      background-color: $orange;
+    }
+  }
 }
 
-.cassette__media_progress_container {
-  display: flex;
-  flex-direction: column-reverse;
-}
+.song_entry {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
 
-.cassette__media_status_bar {
-  display: flex;
-}
+  &.hidden {
+    max-height: 0;
+  }
 
-.cassette__media_info_marquee {
-  flex-grow: 1;
-}
+  .song_entry_progress {
+    position: relative;
+    top: -20px;
+    transform: scaleY(0) translateY(50%);
+    transition: transform 0.5s ease-out;
 
-.cassette__media_progress_bar {
-  height: 2px;
-  background-color: $black;
+    &.active {
+      transform: scaleY(1) translateY(0);
+    }
+  }
 
-  .progress {
-    background-color: $orange;
+  .cassette__media_progress_container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .cassette__media_status_bar {
+    display: flex;
+  }
+
+  .cassette__media_info_marquee {
+    flex-grow: 1;
+    visibility: hidden;
+  }
+
+  .cassette__media_progress_bar {
+    height: 2px;
+    background-color: $black;
+
+    .progress {
+      background-color: $orange;
+    }
+  }
+
+  .cassette__play_pause_button {
+    transform: scale(0.75) translateY(12.5%);
   }
 }

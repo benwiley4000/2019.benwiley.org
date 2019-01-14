@@ -40,7 +40,7 @@ const Header = ({ siteTitle, currentPathname }) => (
       </div>
       <PlayerContextConsumer>
         {({ paused }) => {
-          const hidden = paused || currentPathname === '/music'
+          const hidden = paused || currentPathname.indexOf('/music') === 0
           return (
             <div
               className={'media_progress_wrapper' + (hidden ? ' hidden' : '')}
