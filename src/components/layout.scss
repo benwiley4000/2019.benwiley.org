@@ -2,6 +2,9 @@
 
 $orange: #ffc300;
 
+$navbar_width: 180px;
+$navbar_margin: 30px;
+
 html {
   font-family: 'IBM Plex Serif', serif;
   -ms-text-size-adjust: 100%;
@@ -232,18 +235,21 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-nav {
-  display: flex;
-  flex-direction: column;
 
-  a {
+.main_nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  .nav_item {
     font-weight: bold;
     margin-bottom: 1rem;
     font-size: 1.4rem;
     text-align: right;
     float: right;
+    margin-right: 1rem;
 
-    &.current {
+    > a.current {
       font-style: italic;
 
       &::before {
@@ -251,6 +257,17 @@ nav {
         margin-right: 0.2em;
         font-style: initial;
       }
+    }
+  }
+
+  @media only screen and (min-width: 1080px) {
+    position: absolute;
+    width: $navbar_width;
+    left: 0 - ($navbar_width + $navbar_margin);
+    flex-direction: column;
+
+    .nav_item {
+
     }
   }
 }
