@@ -9,7 +9,7 @@ import './layout.scss';
 import { maxWidth } from './constants';
 import navItems from '../navitems';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, childProps }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,7 +22,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          currentPathname={childProps.location.pathname}
+        />
         <div
           style={{
             margin: `0 auto`,

@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-import Layout from '../components/layout'
 import ProfileImage from '../components/profileimage'
 import SEO from '../components/seo'
 
 import { Link } from 'gatsby'
 
 const IndexPage = props => (
-  <Layout>
+  <Fragment>
     <SEO
       title="About Me | Ben Wiley"
       keywords={['Ben Wiley', 'Cassette', 'JavaScript', 'Open Source', 'Games', 'Web', 'Music', 'Writing']}
@@ -44,7 +43,7 @@ const IndexPage = props => (
       filename="halloween.jpg"
       caption="At a Halloween party (Oct 2012)"
     />
-  </Layout>
+  </Fragment>
 )
 
 export default IndexPage

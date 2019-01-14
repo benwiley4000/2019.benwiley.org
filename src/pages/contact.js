@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const Contact = props => (
-  <Layout>
+  <Fragment>
     <SEO
       title="Contact | Ben Wiley"
       keywords={['Ben Wiley', 'Contact', 'Email', 'GitHub', 'Twitter']}
@@ -13,7 +12,7 @@ const Contact = props => (
     <p><a href="mailto:therealbenwiley@gmail.com">therealbenwiley@gmail.com</a></p>
     <p><a href="https://github.com/benwiley4000">github.com/benwiley4000</a></p>
     <p><a href="https://twitter.com/benwiley4000">@benwiley4000</a></p>
-  </Layout>
+  </Fragment>
 )
 
 export default Contact

@@ -8,6 +8,7 @@ import React, { Component } from 'react'
 import { PlayerContextProvider } from '@cassette/core';
 
 import playlist from './src/playlist';
+import Layout from './src/components/layout'
 
 class Wrapper extends Component {
   render() {
@@ -20,3 +21,7 @@ class Wrapper extends Component {
 }
 
 export const wrapRootElement = ({ element }) => <Wrapper>{element}</Wrapper>
+
+export const wrapPageElement = ({ element, props }) => {
+  return <Layout childProps={props}>{element}</Layout>
+}

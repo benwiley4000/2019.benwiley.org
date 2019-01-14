@@ -7,7 +7,7 @@ import { MediaPlayerControls, MediaProgressDisplay } from '@cassette/player';
 
 import { maxWidth } from './constants';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, currentPathname }) => (
   <div
     style={{
       marginBottom: `1.45rem`,
@@ -39,14 +39,17 @@ const Header = ({ siteTitle }) => (
         <MediaPlayerControls controls={['playpause', 'forwardskip']} />
       </div>
       <PlayerContextConsumer>
-        {({ paused }) =>
-          <div
-            className={'media_progress_wrapper' + (paused ? ' hidden' : '')}
-            onClick={() => navigate('/music')}
-          >
-            <MediaProgressDisplay />
-          </div>
-        }
+        {({ paused }) => {
+          const hidden = paused || currentPathname === '/music';
+          return (
+            <div
+              className={'media_progress_wrapper' + (hidden ? ' hidden' : '')}
+              onClick={() => navigate('/music')}
+            >
+              <MediaProgressDisplay />
+            </div>
+          )
+        }}
       </PlayerContextConsumer>
     </div>
   </div>
