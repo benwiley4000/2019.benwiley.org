@@ -2,10 +2,10 @@ import { Link, navigate } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { PlayerContextConsumer } from '@cassette/core';
-import { MediaPlayerControls, MediaProgressDisplay } from '@cassette/player';
+import { PlayerContextConsumer } from '@cassette/core'
+import { MediaPlayerControls, MediaProgressDisplay } from '@cassette/player'
 
-import { maxWidth } from './constants';
+import { maxWidth } from './constants'
 
 const Header = ({ siteTitle, currentPathname }) => (
   <div
@@ -15,7 +15,7 @@ const Header = ({ siteTitle, currentPathname }) => (
       top: 0,
       zIndex: 1,
       borderBottom: '1px solid #ddd',
-      background: 'white'
+      background: 'white',
     }}
   >
     <div
@@ -40,7 +40,7 @@ const Header = ({ siteTitle, currentPathname }) => (
       </div>
       <PlayerContextConsumer>
         {({ paused }) => {
-          const hidden = paused || currentPathname === '/music';
+          const hidden = paused || currentPathname === '/music'
           return (
             <div
               className={'media_progress_wrapper' + (hidden ? ' hidden' : '')}

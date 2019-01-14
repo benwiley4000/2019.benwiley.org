@@ -4,10 +4,10 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import NavBar from './navbar'
-import './layout.scss';
+import './layout.scss'
 
-import { maxWidth } from './constants';
-import navItems from '../navitems';
+import { maxWidth } from './constants'
+import navItems from '../navitems'
 
 const Layout = ({ children, childProps }) => (
   <StaticQuery

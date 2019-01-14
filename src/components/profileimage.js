@@ -15,12 +15,12 @@ import Img from 'gatsby-image'
  */
 
 const ProfileImage = ({ data, filename, caption }) => {
-  let image;
+  let image
   for (const edge of data.images.edges) {
     const img = edge.node.childImageSharp
     if (img && img.fluid.originalName === filename) {
       image = edge.node.childImageSharp
-      break;
+      break
     }
   }
   return (
@@ -35,7 +35,9 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile(filter: { sourceInstanceName: { eq: "profile_photos" } }) {
+        images: allFile(
+          filter: { sourceInstanceName: { eq: "profile_photos" } }
+        ) {
           edges {
             node {
               childImageSharp {
@@ -55,5 +57,5 @@ export default props => (
 
 ProfileImage.propTypes = {
   filename: PropTypes.string.isRequired,
-  caption: PropTypes.string
+  caption: PropTypes.string,
 }

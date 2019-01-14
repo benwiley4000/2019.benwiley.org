@@ -4,24 +4,28 @@ import React from 'react'
 
 const NavBar = ({ navItems }) => (
   <nav className="main_nav">
-    {navItems.map(({ label, url }) =>
+    {navItems.map(({ label, url }) => (
       <div className="nav_item" key={label}>
         <Link
           to={url}
-          getProps={({ isCurrent }) => isCurrent ? { className: 'current' } : null}
+          getProps={({ isCurrent }) =>
+            isCurrent ? { className: 'current' } : null
+          }
         >
           {label}
         </Link>
       </div>
-    )}
+    ))}
   </nav>
 )
 
 NavBar.propTypes = {
-  navItems: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
-  }).isRequired).isRequired,
+  navItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 export default NavBar
