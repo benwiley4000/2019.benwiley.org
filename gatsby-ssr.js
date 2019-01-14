@@ -4,4 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+import React, { Component } from 'react'
+import { PlayerContextProvider } from '@cassette/core';
+
+import playlist from './src/playlist';
+
+class Wrapper extends Component {
+  render() {
+    return (
+      <PlayerContextProvider playlist={playlist}>
+        {this.props.children}
+      </PlayerContextProvider>
+    )
+  }
+}
+
+export const wrapRootElement = ({ element }) => <Wrapper>{element}</Wrapper>

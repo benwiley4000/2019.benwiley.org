@@ -35,4 +35,4 @@ class Wrapper extends Component {
   }
 }
 
-export const wrapPageElement = ({ element }) => <Wrapper>{element}</Wrapper>
+export const wrapRootElement = ({ element }) => <Wrapper>{element}</Wrapper>
