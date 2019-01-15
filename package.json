@@ -30,12 +30,15 @@
     "start": "npm run develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "gif-stills": "node generateGifStills.js"
   },
   "devDependencies": {
     "gatsby-cli": "^2.4.8",
     "gatsby-plugin-sass": "^2.0.7",
     "gh-pages": "^2.0.1",
+    "gif-frames": "^1.0.1",
+    "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2"
   },
