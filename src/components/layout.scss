@@ -693,7 +693,7 @@ $cassette_btn_bg_color: $black;
 @import '~@cassette/player/src/styles/SkipButton';
 
 .cassette__control_bar {
-  flex-wrap: wrap; // was: warp-reverse;
+  flex-wrap: wrap; // was: wrap-reverse;
 }
 
 .media_progress_wrapper {
