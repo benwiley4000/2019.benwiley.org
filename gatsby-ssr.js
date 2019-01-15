@@ -7,7 +7,7 @@
 import React, { Component } from 'react'
 import { PlayerContextProvider } from '@cassette/core';
 
-import playlist from './src/playlist';
+import playlist from './src/data/playlist';
 import Layout from './src/components/layout'
 
 class Wrapper extends Component {
