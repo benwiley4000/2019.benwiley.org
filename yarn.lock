@@ -777,29 +777,29 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cassette/components@^2.0.0-alpha.16":
-  version "2.0.0-alpha.16"
-  resolved "https://registry.yarnpkg.com/@cassette/components/-/components-2.0.0-alpha.16.tgz#b925e718b432bb96a1b23aca16b228a01040d616"
-  integrity sha512-QRdepNhxMW1cvOhiGMnDYRjWHqjJkhLVq4muuXFHkOBaw8jChykVSjxYOvSWMLL2QjXDp/Nw9I5xeXvSdATkSg==
+"@cassette/components@^2.0.0-alpha.17":
+  version "2.0.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/@cassette/components/-/components-2.0.0-alpha.17.tgz#44acad27a2213bd174b26a80cffe44f0a5da32a7"
+  integrity sha512-rdgHOsr70GKC+/ouslOOWhPV79VALjrov2pI3LqazFHdXNjFWe52HXnEgP7ZcwbfkObnyKYFOogltr4uDKFM2Q==
   dependencies:
-    "@cassette/core" "^2.0.0-alpha.16"
+    "@cassette/core" "^2.0.0-alpha.17"
     prop-types "^15.5.10"
     resize-observer-polyfill "^1.4.2"
 
-"@cassette/core@^2.0.0-alpha.16":
-  version "2.0.0-alpha.16"
-  resolved "https://registry.yarnpkg.com/@cassette/core/-/core-2.0.0-alpha.16.tgz#73cebb4df006590709eaf2aa77419006bf1f0d57"
-  integrity sha512-YAcQXdyB0zhEJOB9krf/YpnXWEO5nNFTl/8LHtXMNfQzWaK5pb7gOO+k7mUaSqdNyf5a84mMzxQsej/CsJOo8Q==
+"@cassette/core@^2.0.0-alpha.17":
+  version "2.0.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/@cassette/core/-/core-2.0.0-alpha.17.tgz#dd2d07d7c7fd7a0fc73ff106652d3eb5b4c0a4a0"
+  integrity sha512-ShwQ3vk40fuDD8ovyqfqOcGKrs1ioNRsXyX0tnCB1BtHyXgoFobI7kVPR77WbLblgH50kEREQDWNpymJCpuAcg==
   dependencies:
     prop-types "^15.5.10"
 
-"@cassette/player@^2.0.0-alpha.16":
-  version "2.0.0-alpha.16"
-  resolved "https://registry.yarnpkg.com/@cassette/player/-/player-2.0.0-alpha.16.tgz#213328aec54137e0099e72486d64d9a2fadc2be8"
-  integrity sha512-nS8kXB1wCDmrhh3j/c4SL6LHdLiJAa89rR93EtxV7/Ord3UrDALSRj3F42qkU3c80soLWDpoa+Pa4ZRwkiPHQQ==
+"@cassette/player@^2.0.0-alpha.17":
+  version "2.0.0-alpha.17"
+  resolved "https://registry.yarnpkg.com/@cassette/player/-/player-2.0.0-alpha.17.tgz#fbf8a7061f3f220d1bfdcd77d48503ec677ec592"
+  integrity sha512-hoyU0qlIUzAmx5GLmDbvvz7lIZXRTvo5dOaq657HKGpyqAIxQzW7uhHMfXFC72gDraF0YWghMun2/3WCGdZjVw==
   dependencies:
-    "@cassette/components" "^2.0.0-alpha.16"
-    "@cassette/core" "^2.0.0-alpha.16"
+    "@cassette/components" "^2.0.0-alpha.17"
+    "@cassette/core" "^2.0.0-alpha.17"
     prop-types "^15.5.10"
 
 "@moocar/lokijs@^1.0.1":

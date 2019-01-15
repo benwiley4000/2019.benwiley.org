@@ -731,7 +731,6 @@ $cassette_btn_bg_color: $black;
 
 .song_entry {
   transition: max-height 0.5s ease-out;
-  overflow: hidden;
 
   &.hidden {
     max-height: 0;
@@ -746,29 +745,29 @@ $cassette_btn_bg_color: $black;
     &.active {
       transform: scaleY(1) translateY(0);
     }
-  }
 
-  .cassette__media_progress_container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column-reverse;
-  }
+    .info {
+      text-align: right;
+    }
 
-  .cassette__media_status_bar {
-    display: flex;
-  }
-
-  .cassette__media_info_marquee {
-    flex-grow: 1;
-    visibility: hidden;
-  }
-
-  .cassette__media_progress_bar {
-    height: 2px;
-    background-color: $black;
+    .progress_bar {
+      height: 2px;
+      background-color: $black;
+    }
 
     .progress {
       background-color: $orange;
+    }
+
+    .song_progress_handle {
+      padding: 20px;
+
+      > * {
+        width: 15px;
+        height: 15px;
+        background-color: $orange;
+        border-radius: 50%;
+      }
     }
   }
 
