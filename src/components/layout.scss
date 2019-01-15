@@ -776,3 +776,40 @@ $cassette_btn_bg_color: $black;
     transform: scale(0.75) translateY(12.5%);
   }
 }
+
+.game_entry {
+  margin-bottom: 70px;
+
+  .gif_player {
+    float: right;
+    width: 150px;
+    margin-left: 1rem;
+    position: relative;
+
+    @media only screen and (min-width: 400px) {
+      width: 200px;
+    }
+
+    @media only screen and (min-width: 600px) {
+      width: 250px;
+    }
+
+    img {
+      margin: 0;
+    }
+
+    &:not(.playing) .play_button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &::after {
+        content: 'GIF';
+        font-size: 50px;
+        color: #fff;
+        font-family: 'IBM Plex Mono', sans-serif;
+      }
+    }
+  }
+}

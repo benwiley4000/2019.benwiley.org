@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 
 import SEO from '../components/seo'
 
+import GameEntry from '../components/gameentry'
+import games from '../data/games'
+
 const Games = props => (
   <Fragment>
     <SEO
@@ -17,7 +20,7 @@ const Games = props => (
       ]}
     />
     <h1>Games</h1>
-    <p>TODO</p>
+    {games.map(game => <GameEntry key={game.title} {...game} />)}
   </Fragment>
 )
 
