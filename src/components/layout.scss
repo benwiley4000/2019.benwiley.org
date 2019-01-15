@@ -727,6 +727,10 @@ $cassette_btn_bg_color: $black;
       background-color: $orange;
     }
   }
+
+  .cassette__media_time_progress {
+    padding-left: 0.5rem;
+  }
 }
 
 .song_entry {
