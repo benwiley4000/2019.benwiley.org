@@ -5,22 +5,22 @@
  */
 
 import React, { Component } from 'react'
-import { PlayerContextProvider } from '@cassette/core';
+import { PlayerContextProvider } from '@cassette/core'
 
-import playlist from './src/data/playlist';
-import Layout from './src/components/layout';
+import playlist from './src/data/playlist'
+import Layout from './src/components/layout'
 
 class Wrapper extends Component {
   constructor(props) {
-    super(props);
-    this.handleStateSnapshot = this.handleStateSnapshot.bind(this);
+    super(props)
+    this.handleStateSnapshot = this.handleStateSnapshot.bind(this)
     this.initialStateSnapshot = JSON.parse(
       localStorage.getItem('media_player_snapshot')
     )
   }
 
   handleStateSnapshot(snapshot) {
-    localStorage.setItem('media_player_snapshot', JSON.stringify(snapshot));
+    localStorage.setItem('media_player_snapshot', JSON.stringify(snapshot))
   }
 
   render() {

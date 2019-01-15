@@ -12,14 +12,14 @@ const Music = ({ playlist, activeTrackIndex }) => (
       keywords={['Ben Wiley', 'Music', 'Soundtrack', 'Games', 'Themes']}
     />
     <h1>Music</h1>
-    {playlist.map((track, i) =>
+    {playlist.map((track, i) => (
       <SongEntry
         key={track.url}
         track={track}
         trackIndex={i}
         active={activeTrackIndex === i}
       />
-    )}
+    ))}
   </Fragment>
 )
 
