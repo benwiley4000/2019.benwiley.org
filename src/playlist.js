@@ -9,7 +9,7 @@ export default [
     meta: {
       description: (
         <Fragment>
-          From the game <i>Home is Where the Heart Is</i>, this draws inspiration from such diverse soundtracks as <i>Animal Crossing</i> and <i>Law and Order: SVU</i>.
+          From the game <i>Home is Where the Heart Is</i>, this draws inspiration from such diverse soundtracks as <i>Animal Crossing</i> and <i>Law and Order</i>.
         </Fragment>
       )
     }
