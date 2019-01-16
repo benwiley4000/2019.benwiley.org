@@ -797,8 +797,8 @@ $cassette_btn_bg_color: $black;
       width: 250px;
     }
 
-    img {
-      margin: 0;
+    video {
+      width: 100%
     }
 
     &:not(.playing) .play_button {

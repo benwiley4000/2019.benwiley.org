@@ -20,7 +20,8 @@ export default [
       },
     ],
     gif: withPrefix('/gifs/sk8border_optimized.gif'),
-    still: withPrefix('/gifs/stills/sk8border_optimized.jpg')
+    still: withPrefix('/gifs/stills/sk8border_optimized.jpg'),
+    gifVideo: withPrefix('/gifs/sk8border_optimized.mp4'),
   },
   {
     title: 'Modulus Woods',
@@ -42,7 +43,8 @@ export default [
       },
     ],
     gif: withPrefix('/gifs/modulus_woods_optimized.gif'),
-    still: withPrefix('/gifs/stills/modulus_woods_optimized.jpg')
+    still: withPrefix('/gifs/stills/modulus_woods_optimized.jpg'),
+    gifVideo: withPrefix('/gifs/modulus_woods_optimized.mp4'),
   },
   {
     title: 'Home is Where the Heart Is',
@@ -63,7 +65,8 @@ export default [
       },
     ],
     gif: withPrefix('/gifs/home_is_where_the_heart_is_optimized.gif'),
-    still: withPrefix('/gifs/stills/home_is_where_the_heart_is_optimized.jpg')
+    still: withPrefix('/gifs/stills/home_is_where_the_heart_is_optimized.jpg'),
+    gifVideo: withPrefix('/gifs/home_is_where_the_heart_is_optimized.mp4'),
   },
   {
     title: 'Marty McPaper: Epic Delivery Service',
@@ -88,7 +91,8 @@ export default [
       },
     ],
     gif: withPrefix('/gifs/marty_mcpaper_optimized.gif'),
-    still: withPrefix('/gifs/stills/marty_mcpaper_optimized.jpg')
+    still: withPrefix('/gifs/stills/marty_mcpaper_optimized.jpg'),
+    gifVideo: withPrefix('/gifs/marty_mcpaper_optimized.mp4'),
   },
   {
     title: 'Cluster Junk: The Secret of Trash Island',
@@ -109,6 +113,7 @@ export default [
       },
     ],
     gif: withPrefix('/gifs/cluster_junk_optimized.gif'),
-    still: withPrefix('/gifs/stills/cluster_junk_optimized.jpg')
+    still: withPrefix('/gifs/stills/cluster_junk_optimized.jpg'),
+    gifVideo: withPrefix('/gifs/cluster_junk_optimized.mp4'),
   },
 ]

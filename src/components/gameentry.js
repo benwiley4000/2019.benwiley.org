@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import GifPlayer from 'react-gif-player'
+import GifVideoPlayer from './gifvideoplayer'
 
 class GameEntry extends PureComponent {
   render() {
@@ -14,13 +14,13 @@ class GameEntry extends PureComponent {
       programmingLanguage,
       engine,
       links,
-      gif,
-      still
+      gifVideo,
+      still,
     } = this.props
     return (
       <div className="game_entry">
         <h3>{title}</h3>
-        <GifPlayer gif={gif} still={still} />
+        <GifVideoPlayer gifVideo={gifVideo} still={still} />
         <p>
           {description}
           <br />
@@ -62,8 +62,8 @@ GameEntry.propsTypes = {
     url: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }).isRequired).isRequired,
-  gif: PropTypes.string.isRequired,
-  still: PropTypes.string.isRequired,
+  gifVideo: PropTypes.string.isRequired,
+  still: PropTypes.string.isRequired
 }
 
 export default GameEntry
