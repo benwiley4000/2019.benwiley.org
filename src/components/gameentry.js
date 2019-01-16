@@ -40,9 +40,13 @@ class GameEntry extends PureComponent {
           {engine}
           <br />
           {links.reduce((elements, link) => {
-            elements.push(<a key={link.url} href={link.url}>{link.text}</a>);
-            elements.push(<br key={link.url + '_br'} />);
-            return elements;
+            elements.push(
+              <a key={link.url} href={link.url}>
+                {link.text}
+              </a>
+            )
+            elements.push(<br key={link.url + '_br'} />)
+            return elements
           }, [])}
         </p>
       </div>
@@ -58,12 +62,14 @@ GameEntry.propsTypes = {
   platforms: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   programmingLanguage: PropTypes.string.isRequired,
   engine: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-  }).isRequired).isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
   gifVideo: PropTypes.string.isRequired,
-  still: PropTypes.string.isRequired
+  still: PropTypes.string.isRequired,
 }
 
 export default GameEntry

@@ -6,12 +6,16 @@ import { PlayPauseButton } from '@cassette/player'
 import { MediaProgressBar } from '@cassette/components'
 
 function convertToTime(number) {
-  const mins = Math.floor(number / 60);
-  const secs = (number % 60).toFixed();
-  return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  const mins = Math.floor(number / 60)
+  const secs = (number % 60).toFixed()
+  return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
 }
 
-const progressBarHandle = <div className="song_progress_handle"><div /></div>;
+const progressBarHandle = (
+  <div className="song_progress_handle">
+    <div />
+  </div>
+)
 
 class SongEntry extends PureComponent {
   render() {
@@ -44,7 +48,7 @@ SongEntry.propsTypes = {
   trackIndex: PropTypes.number.isRequired,
   active: PropTypes.bool.isRequired,
   currentTime: PropTypes.number.isRequired,
-  duration: PropTypes.number.isRequired
+  duration: PropTypes.number.isRequired,
 }
 
 export default playerContextFilter(SongEntry, ['currentTime', 'duration'])

@@ -20,7 +20,9 @@ const Games = props => (
       ]}
     />
     <h1>Games</h1>
-    {games.map(game => <GameEntry key={game.title} {...game} />)}
+    {games.map(game => (
+      <GameEntry key={game.title} {...game} />
+    ))}
   </Fragment>
 )
 

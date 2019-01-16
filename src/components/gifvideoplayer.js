@@ -5,7 +5,7 @@ class GifVideoPlayer extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      playing: false
+      playing: false,
     }
     this.handleClick = this.handleClick.bind(this)
     this.handlePlay = this.handlePlay.bind(this)
@@ -21,11 +21,11 @@ class GifVideoPlayer extends PureComponent {
   }
 
   handlePlay() {
-    this.setState(({ playing }) => playing ? null : { playing: true })
+    this.setState(({ playing }) => (playing ? null : { playing: true }))
   }
 
   handlePause() {
-    this.setState(({ playing }) => playing ? { playing: false } : null)
+    this.setState(({ playing }) => (playing ? { playing: false } : null))
   }
 
   render() {
@@ -35,7 +35,7 @@ class GifVideoPlayer extends PureComponent {
         onClick={this.handleClick}
       >
         <video
-          ref={elem => this.video = elem}
+          ref={elem => (this.video = elem)}
           src={this.props.gifVideo}
           poster={this.props.still}
           onPlay={this.handlePlay}
