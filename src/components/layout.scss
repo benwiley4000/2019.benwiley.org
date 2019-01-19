@@ -3,7 +3,7 @@
 $orange: #ffc300;
 $black: #000;
 
-$navbar_width: 195px;
+$navbar_width: 210px;
 $navbar_margin: 30px;
 
 html {
@@ -266,7 +266,7 @@ img {
     }
   }
 
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 1135px) {
     position: absolute;
     width: $navbar_width;
     left: 0 - ($navbar_width + $navbar_margin);
@@ -780,9 +780,22 @@ $cassette_btn_bg_color: $black;
   }
 }
 
+.work_entry,
 .game_entry {
   margin-bottom: 70px;
+}
 
+.work_entry {
+  .time_and_place {
+    font-style: italic;
+  }
+
+  li {
+    margin-bottom: initial;
+  }
+}
+
+.game_entry {
   .gif_player {
     float: right;
     width: 150px;
