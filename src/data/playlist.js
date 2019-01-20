@@ -9,9 +9,9 @@ export default [
     meta: {
       description: (
         <Fragment>
-          From the game <i>Home is Where the Heart Is</i>, this draws
-          inspiration from such diverse soundtracks as <i>Animal Crossing</i>{' '}
-          and <i>Law and Order</i>.
+          From the game <i>Home is Where the Heart Is</i>, this track blends
+          inspiration from <i>Animal Crossing</i> and <i>Law and Order</i> to
+          evoke a slow but determined search for home ownership.
         </Fragment>
       ),
     },
@@ -22,8 +22,9 @@ export default [
     meta: {
       description: (
         <Fragment>
-          Created for the game <i>Sk8Border</i>, this is my proudest foray into
-          8-bit music.
+          Created for the game <i>Sk8Border</i>, this is the result of trying
+          to make an 80's-style punk song about knocking down a wall, with the
+          sonic limitations of an 80's-style video game console.
         </Fragment>
       ),
     },
@@ -47,10 +48,10 @@ export default [
     meta: {
       description: (
         <Fragment>
-          The title track from <i>Marty McPaper</i> is chaotic and weird, and I
-          heard so much of it during a day of demoing my game to a bunch of kids
-          at an arcade expo, that I never want to hear it again. But I'm still
-          proud of the bicycle bell used as percussion.
+          During a day of demoing my game to a bunch of kids at the{' '}
+          <i>Louisville Arcade Expo</i>, I heard so much of the title track from
+          {' '}<i>Marty McPaper</i> that I never want to hear it again. But I'm
+          still proud of the bicycle bell used as percussion.
         </Fragment>
       ),
     },
@@ -63,8 +64,8 @@ export default [
         <Fragment>
           A rendition of Edvard Grieg's "In the Hall of the Mountain King" that
           pays a nod to the <i>Inspector Gadget</i> theme, which was inspired by
-          the same work. This arrangement was written for my defunct high school
-          band <i>Aqua Buddha</i>, whose name is a long story.
+          the same work. This arrangement was written for (but never performed
+          by) my short-lived band from high school.
         </Fragment>
       ),
     },
