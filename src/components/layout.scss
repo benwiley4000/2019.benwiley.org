@@ -745,6 +745,7 @@ $cassette_btn_bg_color: $black;
     top: -20px;
     transform: scaleY(0) translateY(50%);
     transition: transform 0.5s ease-out;
+    margin-bottom: -30px;
 
     &.active {
       transform: scaleY(1) translateY(0);
@@ -775,13 +776,21 @@ $cassette_btn_bg_color: $black;
     }
   }
 
+  .cassette__media_button_wrapper {
+    position: relative;
+  }
+
   .cassette__play_pause_button {
+    position: absolute;
+    right: -60px;
+    bottom: -10px;
     transform: scale(0.75) translateY(12.5%);
   }
 }
 
 .work_entry,
-.game_entry {
+.game_entry,
+.song_entry {
   margin-bottom: 70px;
 }
 
