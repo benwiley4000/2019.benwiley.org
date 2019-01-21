@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 
 import SEO from '../components/seo'
 
+import WritingCategory from '../components/writingcategory'
+import writing from '../data/writing'
+
 const Writing = props => (
   <Fragment>
     <SEO
@@ -15,7 +18,13 @@ const Writing = props => (
       ]}
     />
     <h1>Writing</h1>
-    <p>TODO</p>
+    <p>
+      As well as the papers/articles below, I have
+      a <a href="http://blog.benwiley.org/">blog</a> (which I rarely update).
+    </p>
+    {writing.map(category => (
+      <WritingCategory key={category.categoryTitle} {...category} />
+    ))}
   </Fragment>
 )
 
