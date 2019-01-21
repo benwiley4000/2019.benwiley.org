@@ -23,7 +23,7 @@ class WorkEntry extends PureComponent {
               {location} {contract && '(contract)'}
             </Fragment>}
         </p>
-        <ul>{bulletPoints.map(point => <li>{point}</li>)}</ul>
+        <ul>{bulletPoints.map((point, i) => <li key={i}>{point}</li>)}</ul>
       </div>
     )
   }
