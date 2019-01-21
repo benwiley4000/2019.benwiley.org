@@ -8,9 +8,17 @@ const NavBar = ({ navItems }) => (
       <div className="nav_item" key={label}>
         <Link
           to={url}
-          getProps={({ isCurrent }) =>
-            isCurrent ? { className: 'current' } : null
-          }
+          getProps={({ location }) => {
+            let trimmedPathname = location.pathname
+            // chop off any / at the end
+            while (
+              trimmedPathname.length > 1 &&
+              trimmedPathname[trimmedPathname.length - 1] === '/'
+            ) {
+              trimmedPathname = trimmedPathname.slice(0, -1)
+            }
+            return trimmedPathname === url ? { className: 'current' } : null
+          }}
         >
           {label}
         </Link>
