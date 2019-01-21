@@ -730,7 +730,8 @@ $cassette_btn_bg_color: $black;
 .work_entry,
 .game_entry,
 .song_entry,
-.writing_category {
+.writing_category,
+.opensource_category {
   margin-bottom: 70px;
 }
 
@@ -834,11 +835,17 @@ $cassette_btn_bg_color: $black;
   }
 }
 
-.writing_entry {
+.writing_entry,
+.opensource_entry {
   margin-bottom: 35px;
+}
 
-  .date {
-    font-style: italic;
-    margin-bottom: 0.3rem;
-  }
+.writing_entry .date,
+.opensource_entry .description {
+  margin-bottom: 0.3rem;
+}
+
+
+.writing_entry .date {
+  font-style: italic;
 }

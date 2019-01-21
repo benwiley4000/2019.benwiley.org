@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 
 import SEO from '../components/seo'
 import SongEntry from '../components/songentry'
+import ProfileImage from '../components/profileimage'
 
 import { playerContextFilter } from '@cassette/core'
 
@@ -20,6 +21,10 @@ const Music = ({ playlist, activeTrackIndex }) => (
         active={activeTrackIndex === i}
       />
     ))}
+    <ProfileImage
+      filename="game_jam.jpg"
+      caption="Composing the soundtrack for the game Sk8Border at the Montréal Anti-Fascist Game Jam (Apr 2018)"
+    />
   </Fragment>
 )
 
