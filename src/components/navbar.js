@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -9,15 +9,17 @@ const NavBar = ({ navItems }) => (
         <Link
           to={url}
           getProps={({ location }) => {
-            let trimmedPathname = location.pathname
-            // chop off any / at the end
-            while (
-              trimmedPathname.length > 1 &&
-              trimmedPathname[trimmedPathname.length - 1] === '/'
-            ) {
-              trimmedPathname = trimmedPathname.slice(0, -1)
+            const trimmed = {
+              pathname: location.pathname,
+              url: withPrefix(url)
             }
-            return trimmedPathname === url ? { className: 'current' } : null
+            for (const p of ['pathname', 'url']) {
+              // chop off any / at the end
+              while (trimmed[p].length > 1 && trimmed[p][trimmed[p].length - 1] === '/') {
+                trimmed[p] = trimmed[p].slice(0, -1)
+              }
+            }
+            return trimmed.pathname === trimmed.url ? { className: 'current' } : null
           }}
         >
           {label}
