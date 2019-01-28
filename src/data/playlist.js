@@ -22,8 +22,8 @@ export default [
     meta: {
       description: (
         <Fragment>
-          Created for the game <i>Sk8Border</i>, this is the result of trying
-          to make an 80's-style punk song about knocking down a wall, with the
+          Created for the game <i>Sk8Border</i>, this is the result of trying to
+          make an 80's-style punk song about knocking down a wall, with the
           sonic limitations of an 80's-style video game console.
         </Fragment>
       ),
@@ -49,9 +49,9 @@ export default [
       description: (
         <Fragment>
           During a day of demoing my game to a bunch of kids at the{' '}
-          <i>Louisville Arcade Expo</i>, I heard so much of the title track from
-          {' '}<i>Marty McPaper</i> that I never want to hear it again. But I'm
-          still proud of the bicycle bell used as percussion.
+          <i>Louisville Arcade Expo</i>, I heard so much of the title track from{' '}
+          <i>Marty McPaper</i> that I never want to hear it again. But I'm still
+          proud of the bicycle bell used as percussion.
         </Fragment>
       ),
     },

@@ -10,20 +10,27 @@ class WorkEntry extends PureComponent {
       startDate,
       endDate,
       contract,
-      bulletPoints
+      bulletPoints,
     } = this.props
     return (
       <div className="work_entry">
-        <h3>{employer} - {title}</h3>
+        <h3>
+          {employer} - {title}
+        </h3>
         <p className="time_and_place">
           {startDate} - {endDate || 'present'}
-          {(location || contract) &&
+          {(location || contract) && (
             <Fragment>
               <br />
               {location} {contract && '(contract)'}
-            </Fragment>}
+            </Fragment>
+          )}
         </p>
-        <ul>{bulletPoints.map((point, i) => <li key={i}>{point}</li>)}</ul>
+        <ul>
+          {bulletPoints.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
       </div>
     )
   }
@@ -36,7 +43,7 @@ WorkEntry.propsTypes = {
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string,
   contract: PropTypes.bool.isRequired,
-  bulletPoints: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired
+  bulletPoints: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
 }
 
 export default WorkEntry

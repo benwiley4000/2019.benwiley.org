@@ -22,7 +22,7 @@ const OpenSource = props => (
         'Lua',
         'Python',
         'C++',
-        'Java'
+        'Java',
       ]}
     />
     <h1>Open Source</h1>

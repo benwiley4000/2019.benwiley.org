@@ -10,12 +10,14 @@ export default [
     contract: false,
     bulletPoints: [
       <Fragment>
-        Developing Shotgun, an Emmy-winning web app that helps streamline production and review for studios creating films, shows and games like <i>Star Wars</i>, <i>Game of Thrones</i> and <i>FIFA</i>
+        Developing Shotgun, an Emmy-winning web app that helps streamline
+        production and review for studios creating films, shows and games like{' '}
+        <i>Star Wars</i>, <i>Game of Thrones</i> and <i>FIFA</i>
       </Fragment>,
       'Role focused on in-app visualization of data belonging to Shotgun clients',
       'Frequent context-switching between large legacy code base and newer stack including React and GraphQL',
-      'Helping lead way on migrating portions of legacy app to newer stack'
-    ]
+      'Helping lead way on migrating portions of legacy app to newer stack',
+    ],
   },
   {
     employer: 'MobileMedTek',
@@ -27,8 +29,8 @@ export default [
     bulletPoints: [
       'Architected and built performant, secure web app, displaying on-demand and real-time medical data',
       'React, Redux, Node.js server rendering, other state-of-the-art JavaScript tools',
-      'Worked closely with back-end developer to ensure smooth communication with MobileMedTek\'s streaming API'
-    ]
+      "Worked closely with back-end developer to ensure smooth communication with MobileMedTek's streaming API",
+    ],
   },
   {
     employer: 'Collabra',
@@ -39,9 +41,9 @@ export default [
     contract: true,
     bulletPoints: [
       'Collaborated with small, agile team using Node.js, React, Flux and MySQL, sharing full stack responsibilities',
-      'Designed, implemented site-wide achievements system based on users\' video/audio recording data',
-      'Contributed regularly to popular open-source software projects on company\'s behalf'
-    ]
+      "Designed, implemented site-wide achievements system based on users' video/audio recording data",
+      "Contributed regularly to popular open-source software projects on company's behalf",
+    ],
   },
   {
     employer: 'Fossil Fuel Divestment Student Network',
@@ -53,7 +55,7 @@ export default [
     bulletPoints: [
       'Developed/maintained NationBuilder website for respected national student organization',
       'Crafted solutions for campaigner initiatives including crucial multi-thousand-dollar fundraising drives',
-      'Trained other network staff and volunteers to use and understand online tools'
-    ]
-  }
+      'Trained other network staff and volunteers to use and understand online tools',
+    ],
+  },
 ]

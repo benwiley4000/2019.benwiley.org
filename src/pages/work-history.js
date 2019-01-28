@@ -18,7 +18,7 @@ const WorkHistory = props => (
         'React',
         'Movies',
         'Games',
-        'Television'
+        'Television',
       ]}
     />
     <h1>Work History</h1>

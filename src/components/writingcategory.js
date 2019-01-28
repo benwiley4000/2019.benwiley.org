@@ -8,7 +8,7 @@ class WritingCategory extends PureComponent {
     return (
       <div className="writing_category">
         <h3>{categoryTitle}</h3>
-        {entries.map(({ title, date, link, description, isLinkExternal }) =>
+        {entries.map(({ title, date, link, description, isLinkExternal }) => (
           <div key={title} className="writing_entry">
             <h4>
               {isLinkExternal && <a href={link}>{title}</a>}
@@ -17,7 +17,7 @@ class WritingCategory extends PureComponent {
             <p className="date">{date}</p>
             <p>{description}</p>
           </div>
-        )}
+        ))}
       </div>
     )
   }
@@ -25,13 +25,15 @@ class WritingCategory extends PureComponent {
 
 WritingCategory.propsTypes = {
   categoryTitle: PropTypes.string.isRequired,
-  entries: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.node.isRequired,
-    date: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    description: PropTypes.node.isRequired,
-    isLinkExternal: PropTypes.bool.isRequired
-  }).isRequired).isRequired
+  entries: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.node.isRequired,
+      date: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+      description: PropTypes.node.isRequired,
+      isLinkExternal: PropTypes.bool.isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 export default WritingCategory

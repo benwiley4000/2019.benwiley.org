@@ -26,9 +26,9 @@ const IndexPage = props => (
       Montréal, Québec, Canada, since 2017.
     </p>
     <p>
-      Since 2015 I have worked professionally developing web software.
-      In my free time I enjoy listening to (and sometimes writing) music, as
-      well as slowly improving my French (which one tends to do in Montréal).
+      Since 2015 I have worked professionally developing web software. In my
+      free time I enjoy listening to (and sometimes writing) music, as well as
+      slowly improving my French (which one tends to do in Montréal).
     </p>
     <p>I speak English natively, and French competently.</p>
     <ProfileImage

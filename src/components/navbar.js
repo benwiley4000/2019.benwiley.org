@@ -11,15 +11,20 @@ const NavBar = ({ navItems }) => (
           getProps={({ location }) => {
             const trimmed = {
               pathname: location.pathname,
-              url: withPrefix(url)
+              url: withPrefix(url),
             }
             for (const p of ['pathname', 'url']) {
               // chop off any / at the end
-              while (trimmed[p].length > 1 && trimmed[p][trimmed[p].length - 1] === '/') {
+              while (
+                trimmed[p].length > 1 &&
+                trimmed[p][trimmed[p].length - 1] === '/'
+              ) {
                 trimmed[p] = trimmed[p].slice(0, -1)
               }
             }
-            return trimmed.pathname === trimmed.url ? { className: 'current' } : null
+            return trimmed.pathname === trimmed.url
+              ? { className: 'current' }
+              : null
           }}
         >
           {label}

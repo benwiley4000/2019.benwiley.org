@@ -19,8 +19,8 @@ const Writing = props => (
     />
     <h1>Writing</h1>
     <p>
-      As well as the papers/articles below, I have
-      a <a href="http://blog.benwiley.org/">blog</a> (which I rarely update).
+      As well as the papers/articles below, I have a{' '}
+      <a href="http://blog.benwiley.org/">blog</a> (which I rarely update).
     </p>
     {writing.map(category => (
       <WritingCategory key={category.categoryTitle} {...category} />
