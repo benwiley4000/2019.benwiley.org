@@ -19,9 +19,16 @@ const progressBarHandle = (
 
 class SongEntry extends PureComponent {
   render() {
-    const { track, trackIndex, active, currentTime, duration } = this.props
+    const {
+      track,
+      trackIndex,
+      active,
+      currentTime,
+      duration,
+      entryRef
+    } = this.props
     return (
-      <div className="song_entry">
+      <div className="song_entry" ref={entryRef}>
         <h3>
           {track.title}
           <PlayPauseButton trackIndex={trackIndex} />
@@ -49,6 +56,7 @@ SongEntry.propsTypes = {
   active: PropTypes.bool.isRequired,
   currentTime: PropTypes.number.isRequired,
   duration: PropTypes.number.isRequired,
+  entryRef: PropTypes.func
 }
 
 export default playerContextFilter(SongEntry, ['currentTime', 'duration'])
