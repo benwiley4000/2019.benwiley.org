@@ -7,6 +7,9 @@
 import React, { Component } from 'react'
 import { PlayerContextProvider } from '@cassette/core'
 
+// TODO: fix this once the offline plugin works correctly?
+require('react-dom').hydrate = require('react-dom').render;
+
 import playlist from './src/data/playlist'
 import Layout from './src/components/layout'
 
