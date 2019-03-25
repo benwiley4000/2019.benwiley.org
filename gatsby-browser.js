@@ -7,11 +7,12 @@
 import React, { Component } from 'react'
 import { PlayerContextProvider } from '@cassette/core'
 
-// TODO: fix this once the offline plugin works correctly?
-require('react-dom').hydrate = require('react-dom').render;
-
 import playlist from './src/data/playlist'
 import Layout from './src/components/layout'
+
+// TODO: fix this once the offline plugin works correctly?
+import ReactDOM from 'react-dom'
+ReactDOM.hydrate = ReactDOM.render
 
 // when this is deployed to the same github pages domain as
 // the cassette docs we don't want them to try to use each
