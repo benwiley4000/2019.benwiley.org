@@ -5,7 +5,7 @@ export default [
       {
         projectName: 'Cassette',
         description:
-          'A flexible media player component library for React that requires no up-front configuration.',
+          'A flexible media player component library for React that requires no up-front configuration. Cassette powers the media playback on this site!',
         programmingLanguages: ['JavaScript', 'CSS'],
         repositoryLink: 'https://github.com/benwiley4000/cassette',
       },
