@@ -13,7 +13,7 @@ export default [
         link: withPrefix('/doc/ant-intelligence.pdf'),
         description:
           'Investigating a decentralized network traffic routing algorithm based on real-world behavior of ant colonies (with Tommy Rhodes).',
-        isLinkExternal: false,
+        isLinkExternal: true,
       },
     ],
   },
@@ -31,7 +31,7 @@ export default [
         link: withPrefix('/doc/narrative-identity-warren.pdf'),
         description:
           "Critical analysis of Senator Elizabeth Warren and daughter Amelia Tyagi's acclaimed 2003 book. Analysis focuses on the underdiscussed role of race in middle-class families' flight to public schools in suburban neighborhoods.",
-        isLinkExternal: false,
+        isLinkExternal: true,
       },
       {
         title:
@@ -40,7 +40,7 @@ export default [
         link: withPrefix('/doc/movement-organizing-social-media.pdf'),
         description:
           'Discussion of new assets and difficulties movements face in the age of social media, using examples of the Zapatistas, Anonymous, the Arab Spring, Occupy, and Kony 2012.',
-        isLinkExternal: false,
+        isLinkExternal: true,
       },
     ],
   },
