@@ -24,9 +24,7 @@ const IndexPage = props => (
       filename="cassette_presentation.jpg"
       caption="Presenting my media player library, Cassette, at the JavaScript Montréal Meetup (Dec 2018)"
     />
-    <p style={{ fontSize: '1.2em' }}>
-      I'm a programmer, musician and speaker.
-    </p>
+    <p style={{ fontSize: '1.2em' }}>I'm a programmer, musician and speaker.</p>
     <p>
       When I'm not working on open source software or developing indie video
       games, I'm probably at my day job at Autodesk. There I help build a tool
@@ -35,9 +33,9 @@ const IndexPage = props => (
     </p>
     <p>
       Sometimes I give presentations on topics related to programming at meetups
-      and conferences. In the past I've also led workshops on jazz
-      improvisation and student organizing. I'm a native English speaker, and
-      these days, my French isn't too bad either.
+      and conferences. In the past I've also led workshops on jazz improvisation
+      and student organizing. I'm a native English speaker, and these days, my
+      French isn't too bad either.
     </p>
     <p>
       In 2015 I received a Bachelor of Arts (B.A.) in Sociology and a Minor in

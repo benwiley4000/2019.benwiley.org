@@ -11,25 +11,25 @@ class Music extends PureComponent {
     super(props)
     this.activeEntryRef = elem => {
       this.initialActiveDiv = elem
-    };
+    }
   }
 
   componentDidMount() {
-    const { state } = this.props.location;
+    const { state } = this.props.location
     if (state && state.scrollToActiveTrack && this.initialActiveDiv) {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           this.initialActiveDiv.scrollIntoView({
             behavior: 'smooth',
-            block: 'center'
-          });
+            block: 'center',
+          })
         })
       })
     }
   }
 
   render() {
-    const { playlist, activeTrackIndex } = this.props;
+    const { playlist, activeTrackIndex } = this.props
     return (
       <Fragment>
         <SEO
@@ -51,7 +51,7 @@ class Music extends PureComponent {
           caption="Composing the soundtrack for the game Sk8Border at the Montréal Anti-Fascist Game Jam (Apr 2018)"
         />
       </Fragment>
-    );
+    )
   }
 }
 

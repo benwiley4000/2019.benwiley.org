@@ -45,7 +45,7 @@ const Header = ({ siteTitle, currentPathname }) => (
             <div
               className={'media_progress_wrapper' + (hidden ? ' hidden' : '')}
               onClick={() => {
-                navigate('/music', { state: { scrollToActiveTrack: true } });
+                navigate('/music', { state: { scrollToActiveTrack: true } })
               }}
             >
               <MediaProgressDisplay />

@@ -29,7 +29,7 @@ const ProfileImage = ({ data, filename, caption, right }) => {
         maxWidth: right ? 300 : 600,
         float: right ? 'right' : undefined,
         marginLeft: right ? '1rem' : undefined,
-        marginBottom: right ? '0.5rem' : '1.45rem'
+        marginBottom: right ? '0.5rem' : '1.45rem',
       }}
     >
       <Img fluid={image.fluid} />
@@ -65,9 +65,9 @@ export default props => (
 ProfileImage.propTypes = {
   filename: PropTypes.string.isRequired,
   caption: PropTypes.string,
-  right: PropTypes.bool.isRequired
+  right: PropTypes.bool.isRequired,
 }
 
 ProfileImage.defaultProps = {
-  right: false
+  right: false,
 }

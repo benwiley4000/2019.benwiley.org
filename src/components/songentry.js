@@ -25,7 +25,7 @@ class SongEntry extends PureComponent {
       active,
       currentTime,
       duration,
-      entryRef
+      entryRef,
     } = this.props
     return (
       <div className="song_entry" ref={entryRef}>
@@ -56,7 +56,7 @@ SongEntry.propsTypes = {
   active: PropTypes.bool.isRequired,
   currentTime: PropTypes.number.isRequired,
   duration: PropTypes.number.isRequired,
-  entryRef: PropTypes.func
+  entryRef: PropTypes.func,
 }
 
 export default playerContextFilter(SongEntry, ['currentTime', 'duration'])
