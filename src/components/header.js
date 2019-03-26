@@ -7,6 +7,8 @@ import { MediaPlayerControls, MediaProgressDisplay } from '@cassette/player'
 
 import { maxWidth } from './constants'
 
+const playerContextFilterList = ['paused']
+
 const Header = ({ siteTitle, currentPathname }) => (
   <div
     style={{
@@ -38,7 +40,7 @@ const Header = ({ siteTitle, currentPathname }) => (
         </h1>
         <MediaPlayerControls controls={['playpause', 'forwardskip']} />
       </div>
-      <PlayerContextConsumer>
+      <PlayerContextConsumer filterList={playerContextFilterList}>
         {({ paused }) => {
           const hidden = paused || currentPathname.indexOf('/music') !== -1
           return (
