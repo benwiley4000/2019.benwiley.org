@@ -26,10 +26,6 @@ const OpenSource = props => (
       ]}
     />
     <h1>Open Source</h1>
-    <ProfileImage
-      filename="cassette_presentation.jpg"
-      caption="Presenting my media player library, Cassette, at the JavaScript Montréal Meetup (Dec 2018)"
-    />
     <p>
       Below is a selection of open source software projects I have authored.
       Additionally, all the <Link to="/games">games</Link> I've worked on are
