@@ -20,7 +20,8 @@ class Music extends PureComponent {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           this.initialActiveDiv.scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'center'
           });
         })
       })
