@@ -845,7 +845,20 @@ $cassette_btn_bg_color: $black;
   margin-bottom: 0.3rem;
 }
 
-
 .writing_entry .date {
   font-style: italic;
+}
+
+.profile_image {
+  max-width: 600px;
+  margin-bottom: 1.45rem;
+
+  @media only screen and (min-width: 500px) {
+    &.right {
+      max-width: 50%;
+      float: right;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
 }

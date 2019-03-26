@@ -24,14 +24,7 @@ const ProfileImage = ({ data, filename, caption, right }) => {
     }
   }
   return (
-    <figure
-      style={{
-        maxWidth: right ? 300 : 600,
-        float: right ? 'right' : undefined,
-        marginLeft: right ? '1rem' : undefined,
-        marginBottom: right ? '0.5rem' : '1.45rem',
-      }}
-    >
+    <figure className={'profile_image' + (right ? ' right' : '')}>
       <Img fluid={image.fluid} />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
