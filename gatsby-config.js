@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `2019.benwiley.org`,
-        short_name: `2019_site`,
+        name: `benwiley.org`,
+        short_name: `benwiley.org`,
         start_url: `/`,
         background_color: `#FFC300`,
         theme_color: `#FFC300`,
