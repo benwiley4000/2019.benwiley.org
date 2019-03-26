@@ -14,7 +14,7 @@ import Img from 'gatsby-image'
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const ProfileImage = ({ data, filename, caption }) => {
+const ProfileImage = ({ data, filename, caption, right }) => {
   let image
   for (const edge of data.images.edges) {
     const img = edge.node.childImageSharp
@@ -24,7 +24,14 @@ const ProfileImage = ({ data, filename, caption }) => {
     }
   }
   return (
-    <figure style={{ maxWidth: 600, marginBottom: `1.45rem` }}>
+    <figure
+      style={{
+        maxWidth: right ? 300 : 600,
+        float: right ? 'right' : undefined,
+        marginLeft: right ? '1rem' : undefined,
+        marginBottom: right ? '0.5rem' : '1.45rem'
+      }}
+    >
       <Img fluid={image.fluid} />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
@@ -58,4 +65,9 @@ export default props => (
 ProfileImage.propTypes = {
   filename: PropTypes.string.isRequired,
   caption: PropTypes.string,
+  right: PropTypes.bool.isRequired
+}
+
+ProfileImage.defaultProps = {
+  right: false
 }
