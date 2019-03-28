@@ -9,6 +9,9 @@ import { playerContextFilter } from '@cassette/core'
 class Music extends PureComponent {
   constructor(props) {
     super(props)
+    this.state = {
+      mounted: false
+    }
     this.activeEntryRef = elem => {
       this.initialActiveDiv = elem
     }
@@ -16,16 +19,20 @@ class Music extends PureComponent {
 
   componentDidMount() {
     const { state } = this.props.location
-    if (state && state.scrollToActiveTrack && this.initialActiveDiv) {
+    const div = state && state.scrollToActiveTrack && this.initialActiveDiv;
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          this.initialActiveDiv.scrollIntoView({
+        if (div) {
+          div.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
-          })
-        })
+          });
+        }
+        this.setState({
+          mounted: true
+        });
       })
-    }
+    });
   }
 
   render() {
@@ -43,7 +50,7 @@ class Music extends PureComponent {
             key={track.url}
             track={track}
             trackIndex={i}
-            active={activeTrackIndex === i}
+            active={this.state.mounted && activeTrackIndex === i}
           />
         ))}
         <ProfileImage
