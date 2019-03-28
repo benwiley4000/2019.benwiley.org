@@ -111,7 +111,7 @@ export default [
     links: [
       {
         url: 'http://twoscoopgames.com/clusterjunk/',
-        text: 'Visit the website'
+        text: 'Visit the website',
       },
       {
         url: 'http://twoscoopgames.com/ld34/',

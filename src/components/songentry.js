@@ -22,7 +22,7 @@ class SongEntry extends PureComponent {
     super(props)
     this.state = {
       timeWhenLastActive: props.currentTime,
-      durationWhenLastActive: props.duration
+      durationWhenLastActive: props.duration,
     }
   }
 
@@ -30,7 +30,7 @@ class SongEntry extends PureComponent {
     if (props.active) {
       return {
         timeWhenLastActive: props.currentTime,
-        durationWhenLastActive: props.duration
+        durationWhenLastActive: props.duration,
       }
     }
     return null
@@ -50,21 +50,23 @@ class SongEntry extends PureComponent {
           <div className="info">
             {convertToTime(t)} / {convertToTime(dur)}
           </div>
-         {active &&
-           <MediaProgressBar
+          {active && (
+            <MediaProgressBar
               progressDirection="right"
               className="progress_bar"
               progressClassName="progress"
               handle={progressBarHandle}
-            />}
-          {!active &&
+            />
+          )}
+          {!active && (
             <ProgressBarDisplay
               progress={t / dur}
               progressDirection="right"
               className="progress_bar"
               progressClassName="progress"
               handle={progressBarHandle}
-            />}
+            />
+          )}
         </div>
       </div>
     )

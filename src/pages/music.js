@@ -10,7 +10,7 @@ class Music extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      mounted: false
+      mounted: false,
     }
     this.activeEntryRef = elem => {
       this.initialActiveDiv = elem
@@ -19,20 +19,20 @@ class Music extends PureComponent {
 
   componentDidMount() {
     const { state } = this.props.location
-    const div = state && state.scrollToActiveTrack && this.initialActiveDiv;
+    const div = state && state.scrollToActiveTrack && this.initialActiveDiv
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         if (div) {
           div.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
-          });
+          })
         }
         this.setState({
-          mounted: true
-        });
+          mounted: true,
+        })
       })
-    });
+    })
   }
 
   render() {
