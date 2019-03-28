@@ -6,7 +6,7 @@ export default [
   {
     title: 'Home is Where the Heart Is',
     url: withPrefix('/audio/home_is_where_the_heart_is.mp3'),
-    artwork: { src: withPrefix('/album_artwork/home.jpg') },
+    artwork: [{ src: withPrefix('/album_artwork/home.jpg') }],
     duration: '2:32',
     meta: {
       description: (
@@ -21,7 +21,7 @@ export default [
   {
     title: 'Sk8Border',
     url: withPrefix('/audio/sk8border.mp3'),
-    artwork: { src: withPrefix('/album_artwork/sk8border_logo.png') },
+    artwork: [{ src: withPrefix('/album_artwork/sk8border_logo.png') }],
     duration: '1:55',
     meta: {
       description: (
@@ -36,7 +36,7 @@ export default [
   {
     title: 'Trash Island Bossa',
     url: withPrefix('/audio/trash_island_bossa.mp3'),
-    artwork: { src: withPrefix('/album_artwork/clusterjunk.jpg') },
+    artwork: [{ src: withPrefix('/album_artwork/clusterjunk.jpg') }],
     duration: '2:21',
     meta: {
       description: (
@@ -51,7 +51,7 @@ export default [
   {
     title: 'Marty McPaper: Epic Delivery Service',
     url: withPrefix('/audio/marty_mcpaper_theme.mp3'),
-    artwork: { src: withPrefix('/album_artwork/martymcpaper.png') },
+    artwork: [{ src: withPrefix('/album_artwork/martymcpaper.png') }],
     duration: '2:14',
     meta: {
       description: (
@@ -82,7 +82,7 @@ export default [
   {
     title: 'The Secret of Trash Island',
     url: withPrefix('/audio/secret_of_trash_island.mp3'),
-    artwork: { src: withPrefix('/album_artwork/clusterjunk.jpg') },
+    artwork: [{ src: withPrefix('/album_artwork/clusterjunk.jpg') }],
     duration: '1:49',
     meta: {
       description: (
