@@ -110,6 +110,10 @@ export default [
     engine: 'Splat ECS',
     links: [
       {
+        url: 'http://twoscoopgames.com/clusterjunk/',
+        text: 'Visit the website'
+      },
+      {
         url: 'http://twoscoopgames.com/ld34/',
         text: 'Play an early preview online',
       },
