@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { playerContextFilter } from '@cassette/core'
 import { PlayPauseButton } from '@cassette/player'
-import { MediaProgressBar } from '@cassette/components'
+import { MediaProgressBar, ProgressBarDisplay } from '@cassette/components'
 
 function convertToTime(number) {
   const mins = Math.floor(number / 60)
@@ -18,15 +18,27 @@ const progressBarHandle = (
 )
 
 class SongEntry extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      timeWhenLastActive: props.currentTime,
+      durationWhenLastActive: props.duration
+    }
+  }
+
+  static getDerivedStateFromProps(props) {
+    if (props.active) {
+      return {
+        timeWhenLastActive: props.currentTime,
+        durationWhenLastActive: props.duration
+      }
+    }
+    return null
+  }
+
   render() {
-    const {
-      track,
-      trackIndex,
-      active,
-      currentTime,
-      duration,
-      entryRef,
-    } = this.props
+    const { track, trackIndex, active, entryRef } = this.props
+    const { timeWhenLastActive: t, durationWhenLastActive: dur } = this.state
     return (
       <div className="song_entry" ref={entryRef}>
         <h3>
@@ -36,14 +48,23 @@ class SongEntry extends PureComponent {
         <p>{track.meta.description}</p>
         <div className={'song_entry_progress' + (active ? ' active' : '')}>
           <div className="info">
-            {convertToTime(currentTime)} / {convertToTime(duration)}
+            {convertToTime(t)} / {convertToTime(dur)}
           </div>
-          <MediaProgressBar
-            progressDirection="right"
-            className="progress_bar"
-            progressClassName="progress"
-            handle={progressBarHandle}
-          />
+         {active &&
+           <MediaProgressBar
+              progressDirection="right"
+              className="progress_bar"
+              progressClassName="progress"
+              handle={progressBarHandle}
+            />}
+          {!active &&
+            <ProgressBarDisplay
+              progress={t / dur}
+              progressDirection="right"
+              className="progress_bar"
+              progressClassName="progress"
+              handle={progressBarHandle}
+            />}
         </div>
       </div>
     )
