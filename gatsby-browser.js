@@ -162,3 +162,11 @@ document.addEventListener('click', e => {
     })
   }
 })
+
+console.log(`
+This site is tracking anonymous analytics using Fair Analytics.
+All collected data is stored on my own domain and is auditable. To learn more
+about how you can audit this site's analytics, read the Fair Analytics Endpoints
+documentation at https://github.com/vesparny/fair-analytics#endpoints.
+The analytics url is: ${process.env.ANALYTICS_URL}
+`);
