@@ -18,7 +18,7 @@ ReactDOM.hydrate = ReactDOM.render
 // when this is deployed to the same github pages domain as
 // the cassette docs we don't want them to try to use each
 // other's localStorage data
-const localStorageKey = 'media_player_snapshot__skfljadlf';
+const localStorageKey = 'media_player_snapshot__skfljadlf'
 
 class Wrapper extends Component {
   constructor(props) {
@@ -55,93 +55,93 @@ export const wrapPageElement = ({ element, props }) => {
 // EVERYTHING BELOW CONCERNS ANALYTICS
 
 const fa = fairAnalytics({
-  url: process.env.ANALYTICS_URL
-});
+  url: process.env.ANALYTICS_URL,
+})
 
 export const onInitialClientRender = () => {
   fa.send({
     event: 'routeLoadedFromServer',
-    pathname: getPathnameForAnalytics()
+    pathname: getPathnameForAnalytics(),
   })
-  setupMediaAnalytics();
+  setupMediaAnalytics()
 }
 
 export const onRouteUpdate = ({ location }) => {
   fa.send({
     event: 'routeRendered',
-    pathname: getPathnameForAnalytics(location.pathname)
+    pathname: getPathnameForAnalytics(location.pathname),
   })
 }
 
 function getPathnameForAnalytics(pathname) {
-  pathname = pathname || window.location.pathname;
+  pathname = pathname || window.location.pathname
   if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
-    return pathname.slice(0, -1);
+    return pathname.slice(0, -1)
   }
-  return pathname;
+  return pathname
 }
 
 function setupMediaAnalytics() {
-  const media = document.querySelector('video');
-  let lastTimeAtSeekingStart = media.currentTime;
-  let pendingSeekReport = false;
-  let pendingNewTrackTimeout = true;
+  const media = document.querySelector('video')
+  let lastTimeAtSeekingStart = media.currentTime
+  let pendingSeekReport = false
+  let pendingNewTrackTimeout = true
 
   media.addEventListener('emptied', () => {
-    pendingNewTrackTimeout = true;
-  });
+    pendingNewTrackTimeout = true
+  })
   media.addEventListener('canplay', () => {
     setTimeout(() => {
-      pendingNewTrackTimeout = false;
-    }, 100);
-  });
+      pendingNewTrackTimeout = false
+    }, 100)
+  })
   media.addEventListener('timeupdate', () => {
     if (pendingSeekReport) {
-      return;
+      return
     }
-    lastTimeAtSeekingStart = media.currentTime;
-  });
+    lastTimeAtSeekingStart = media.currentTime
+  })
   media.addEventListener('seeking', () => {
     if (pendingNewTrackTimeout) {
-      return;
+      return
     }
-    pendingSeekReport = true;
-  });
-  media.addEventListener('play', () => {
-    fa.send(getMediaAnalyticsProperties('mediaPlayed'));
-  });
-  media.addEventListener('pause', () => {
-    fa.send(getMediaAnalyticsProperties('mediaPaused'));
+    pendingSeekReport = true
   })
-  let seekTimeout;
+  media.addEventListener('play', () => {
+    fa.send(getMediaAnalyticsProperties('mediaPlayed'))
+  })
+  media.addEventListener('pause', () => {
+    fa.send(getMediaAnalyticsProperties('mediaPaused'))
+  })
+  let seekTimeout
   media.addEventListener('seeked', () => {
     if (pendingNewTrackTimeout) {
-      return;
+      return
     }
     const event = {
       ...getMediaAnalyticsProperties('mediaSeeked'),
-      previousTime: lastTimeAtSeekingStart
-    };
-    clearTimeout(seekTimeout);
+      previousTime: lastTimeAtSeekingStart,
+    }
+    clearTimeout(seekTimeout)
     seekTimeout = setTimeout(() => {
-      fa.send(event);
-      pendingSeekReport = false;
-    }, 700);
-  });
+      fa.send(event)
+      pendingSeekReport = false
+    }, 700)
+  })
   media.addEventListener('ended', () => {
     if (pendingSeekReport) {
-      return;
+      return
     }
-    fa.send(getMediaAnalyticsProperties('mediaEndedNaturally'));
-  });
+    fa.send(getMediaAnalyticsProperties('mediaEndedNaturally'))
+  })
 
   function getMediaAnalyticsProperties(eventName) {
     return {
       event: eventName,
       mediaSrc: media.src,
       currentTime: media.currentTime,
-      pathname: getPathnameForAnalytics()
-    };
+      pathname: getPathnameForAnalytics(),
+    }
   }
 }
 
@@ -158,7 +158,7 @@ document.addEventListener('click', e => {
     fa.send({
       event: 'linkClicked',
       pathname: getPathnameForAnalytics(),
-      href: a.href
+      href: a.href,
     })
   }
 })

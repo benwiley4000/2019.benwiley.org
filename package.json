@@ -31,7 +31,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "format": "prettier --write \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.js\" \"./*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "gif-stills": "node generateGifStills.js"
   },

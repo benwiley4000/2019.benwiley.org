@@ -33,5 +33,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-  pathPrefix: '/2019.benwiley.org'
+  pathPrefix: '/2019.benwiley.org',
 }
