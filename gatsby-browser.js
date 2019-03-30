@@ -58,27 +58,29 @@ const fa = fairAnalytics({
   url: process.env.ANALYTICS_URL,
 })
 
-export const onInitialClientRender = () => {
+function sendAnalytics(data) {
+  let pathname = data.pathname || window.location.pathname
+  if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
+    pathname = pathname.slice(0, -1)
+  }
+  const { host } = window.location
   fa.send({
-    event: 'routeLoadedFromServer',
-    pathname: getPathnameForAnalytics(),
+    ...data,
+    pathname,
+    host,
   })
+}
+
+export const onInitialClientRender = () => {
+  sendAnalytics({ event: 'routeLoadedAsHTML' })
   setupMediaAnalytics()
 }
 
 export const onRouteUpdate = ({ location }) => {
-  fa.send({
+  sendAnalytics({
     event: 'routeRendered',
-    pathname: getPathnameForAnalytics(location.pathname),
+    pathname: location.pathname,
   })
-}
-
-function getPathnameForAnalytics(pathname) {
-  pathname = pathname || window.location.pathname
-  if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
-    return pathname.slice(0, -1)
-  }
-  return pathname
 }
 
 function setupMediaAnalytics() {
@@ -108,10 +110,10 @@ function setupMediaAnalytics() {
     pendingSeekReport = true
   })
   media.addEventListener('play', () => {
-    fa.send(getMediaAnalyticsProperties('mediaPlayed'))
+    sendAnalytics(getMediaAnalyticsProperties('mediaPlayed'))
   })
   media.addEventListener('pause', () => {
-    fa.send(getMediaAnalyticsProperties('mediaPaused'))
+    sendAnalytics(getMediaAnalyticsProperties('mediaPaused'))
   })
   let seekTimeout
   media.addEventListener('seeked', () => {
@@ -124,7 +126,7 @@ function setupMediaAnalytics() {
     }
     clearTimeout(seekTimeout)
     seekTimeout = setTimeout(() => {
-      fa.send(event)
+      sendAnalytics(event)
       pendingSeekReport = false
     }, 700)
   })
@@ -132,7 +134,7 @@ function setupMediaAnalytics() {
     if (pendingSeekReport) {
       return
     }
-    fa.send(getMediaAnalyticsProperties('mediaEndedNaturally'))
+    sendAnalytics(getMediaAnalyticsProperties('mediaEndedNaturally'))
   })
 
   function getMediaAnalyticsProperties(eventName) {
@@ -140,7 +142,6 @@ function setupMediaAnalytics() {
       event: eventName,
       mediaSrc: media.src,
       currentTime: media.currentTime,
-      pathname: getPathnameForAnalytics(),
     }
   }
 }
@@ -155,9 +156,8 @@ document.addEventListener('click', e => {
     }
   }
   if (a) {
-    fa.send({
+    sendAnalytics({
       event: 'linkClicked',
-      pathname: getPathnameForAnalytics(),
       href: a.href,
     })
   }
@@ -169,4 +169,4 @@ All collected data is stored on my own domain and is auditable. To learn more
 about how you can audit this site's analytics, read the Fair Analytics Endpoints
 documentation at https://github.com/vesparny/fair-analytics#endpoints.
 The analytics url is: ${process.env.ANALYTICS_URL}
-`);
+`)
