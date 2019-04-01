@@ -168,7 +168,7 @@ document.addEventListener('click', e => {
 
 window.addEventListener('beforeunload', () => {
   sendAnalytics({ event: 'unloadingPage' }, true)
-});
+})
 
 console.log(`
 This site is tracking anonymous analytics using Fair Analytics.
