@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 import { PlayerContextProvider } from '@cassette/core'
-import fairAnalytics from 'fair-analytics-client-api'
+import fairAnalytics from '@benwiley4000/fair-analytics-client-beacon-api'
 
 import playlist from './src/data/playlist'
 import Layout from './src/components/layout'
@@ -58,17 +58,20 @@ const fa = fairAnalytics({
   url: process.env.ANALYTICS_URL,
 })
 
-function sendAnalytics(data) {
+function sendAnalytics(data, guaranteeRequest = false) {
   let pathname = data.pathname || window.location.pathname
   if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
     pathname = pathname.slice(0, -1)
   }
   const { host } = window.location
-  fa.send({
-    ...data,
-    pathname,
-    host,
-  })
+  fa.send(
+    {
+      ...data,
+      pathname,
+      host,
+    },
+    guaranteeRequest
+  )
 }
 
 export const onInitialClientRender = () => {
@@ -162,6 +165,10 @@ document.addEventListener('click', e => {
     })
   }
 })
+
+window.addEventListener('beforeunload', () => {
+  sendAnalytics({ event: 'unloadingPage' }, true)
+});
 
 console.log(`
 This site is tracking anonymous analytics using Fair Analytics.
