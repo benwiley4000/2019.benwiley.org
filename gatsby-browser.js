@@ -140,6 +140,16 @@ function setupMediaAnalytics() {
     sendAnalytics(getMediaAnalyticsProperties('mediaEndedNaturally'))
   })
 
+  const headerMediaProgress = document.querySelector('.media_progress_wrapper')
+  document.addEventListener('click', e => {
+    for (let i = 0; i < e.path.length; i++) {
+      if (e.path[i] === headerMediaProgress) {
+        sendAnalytics(getMediaAnalyticsProperties('musicHeaderClicked'))
+        break
+      }
+    }
+  })
+
   function getMediaAnalyticsProperties(eventName) {
     return {
       event: eventName,
