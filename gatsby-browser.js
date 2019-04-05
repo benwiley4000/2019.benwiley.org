@@ -75,7 +75,10 @@ function sendAnalytics(data, guaranteeRequest = false) {
 }
 
 export const onInitialClientRender = () => {
-  sendAnalytics({ event: 'routeLoadedAsHTML' })
+  sendAnalytics({
+    event: 'routeLoadedAsHTML',
+    referrer: document.referrer,
+  })
   setupMediaAnalytics()
 }
 
