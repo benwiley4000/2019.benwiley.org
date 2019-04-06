@@ -40,7 +40,7 @@ class Music extends PureComponent {
     return (
       <Fragment>
         <SEO
-          title="Music | Ben Wiley"
+          title="Music"
           keywords={['Ben Wiley', 'Music', 'Soundtrack', 'Games', 'Themes']}
         />
         <h1>Music</h1>

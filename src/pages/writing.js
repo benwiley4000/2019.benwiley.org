@@ -8,7 +8,7 @@ import writing from '../data/writing'
 const Writing = props => (
   <Fragment>
     <SEO
-      title="Writing | Ben Wiley"
+      title="Writing"
       keywords={[
         'Ben Wiley',
         'Writing',

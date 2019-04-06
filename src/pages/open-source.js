@@ -10,7 +10,7 @@ import opensource from '../data/opensource'
 const OpenSource = props => (
   <Fragment>
     <SEO
-      title="OpenSource | Ben Wiley"
+      title="Open Source"
       keywords={[
         'Ben Wiley',
         'Cassette',

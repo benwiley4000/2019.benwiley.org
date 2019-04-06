@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 const Contact = props => (
   <Fragment>
     <SEO
-      title="Contact | Ben Wiley"
+      title="Contact"
       keywords={['Ben Wiley', 'Contact', 'Email', 'GitHub', 'Twitter']}
     />
     <h1>Contact</h1>

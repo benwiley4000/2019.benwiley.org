@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 const IndexPage = props => (
   <Fragment>
     <SEO
-      title="About Me | Ben Wiley"
+      title="About Me"
       keywords={[
         'Ben Wiley',
         'Cassette',

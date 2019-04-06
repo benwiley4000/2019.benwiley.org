@@ -8,7 +8,7 @@ import games from '../data/games'
 const Games = props => (
   <Fragment>
     <SEO
-      title="Games | Ben Wiley"
+      title="Games"
       keywords={[
         'Ben Wiley',
         'Games',

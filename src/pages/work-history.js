@@ -8,7 +8,7 @@ import workhistory from '../data/workhistory'
 const WorkHistory = props => (
   <Fragment>
     <SEO
-      title="Work History | Ben Wiley"
+      title="Work History"
       keywords={[
         'Ben Wiley',
         'Autodesk',
