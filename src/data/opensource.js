@@ -10,6 +10,13 @@ export default [
         repositoryLink: 'https://github.com/benwiley4000/cassette',
       },
       {
+        projectName: 'Win95 Media Player',
+        description:
+          'A React media player component inspired by the Media Player app that shipped with Windows 95. Also powered by Cassette!',
+        programmingLanguages: ['JavaScript'],
+        repositoryLink: 'https://github.com/benwiley4000/win95-media-player',
+      },
+      {
         projectName: 'React GIF Player',
         description:
           'A component for React that allows a user to toggle a GIF animation on and off.',
@@ -61,6 +68,13 @@ export default [
           "An API for subscribing to changes in a PICO-8 game's GPIO state from JavaScript. This enables easy implementation of effects, such as device vibration, in response to in-game events.",
         programmingLanguages: ['JavaScript'],
         repositoryLink: 'https://github.com/benwiley4000/pico8-gpio-listener',
+      },
+      {
+        projectName: 'pico8-to-lua',
+        description:
+          "A command-line utility that converts the PICO-8 variety of extended Lua syntax to standard Lua syntax.",
+        programmingLanguages: ['Lua'],
+        repositoryLink: 'https://github.com/benwiley4000/pico8-to-lua',
       },
       {
         projectName: 'pico8-messenger',
