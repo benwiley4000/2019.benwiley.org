@@ -10,7 +10,7 @@ class SpeakingEntry extends PureComponent {
       description,
       youtubeId,
     } = this.props
-    const youtubeUrl = `http://www.youtube.com/embed/${youtubeId}?enablejsapi=1&origin=https://benwiley.org`
+    const youtubeUrl = `https://www.youtube.com/embed/${youtubeId}?enablejsapi=1&origin=https://benwiley.org`
     return (
       <div className="speaking_entry">
         <h3>{title}</h3>
