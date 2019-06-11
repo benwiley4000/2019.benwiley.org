@@ -730,6 +730,7 @@ $cassette_btn_bg_color: $black;
 .work_entry,
 .game_entry,
 .song_entry,
+.speaking_entry,
 .writing_category,
 .opensource_category {
   margin-bottom: 70px;
@@ -790,14 +791,15 @@ $cassette_btn_bg_color: $black;
   }
 }
 
-.work_entry {
+.work_entry,
+.speaking_entry {
   .time_and_place {
     font-style: italic;
   }
+}
 
-  li {
-    margin-bottom: initial;
-  }
+.work_entry li {
+  margin-bottom: initial;
 }
 
 .game_entry {
@@ -847,6 +849,11 @@ $cassette_btn_bg_color: $black;
 
 .writing_entry .date {
   font-style: italic;
+}
+
+.speaking_entry iframe {
+  width: 100%;
+  height: 300px;
 }
 
 .profile_image {
