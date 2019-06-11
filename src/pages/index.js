@@ -41,10 +41,7 @@ const IndexPage = props => (
       In 2015 I received a Bachelor of Arts (B.A.) in Sociology and a Minor in
       Computer Science from Davidson College in Davidson, North Carolina, USA.
     </p>
-    <ProfileImage
-      filename="tunisia_desert.jpg"
-      caption="On a class trip in the south of Tunisia, where I studied for one semester (Feb 2014)"
-    />
+    <ProfileImage filename="heardofwhat.jpg" />
   </Fragment>
 )
 
