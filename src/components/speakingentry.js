@@ -1,6 +1,22 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
+const youtubeBasePath = 'https://www.youtube.com/embed/'
+
+const youtubeParams = {
+  enablejsapi: 1,
+  origin: 'https://benwiley.org',
+  color: 'white',
+}
+const stringifiedYoutubeParams = Object
+  .keys(youtubeParams)
+  .map(key => `${key}=${youtubeParams[key]}`)
+  .join('&')
+
+function getYoutubeUrl(youtubeId) {
+  return `${youtubeBasePath}/${youtubeId}?${stringifiedYoutubeParams}`
+}
+
 class SpeakingEntry extends PureComponent {
   render() {
     const {
@@ -10,7 +26,6 @@ class SpeakingEntry extends PureComponent {
       description,
       youtubeId,
     } = this.props
-    const youtubeUrl = `https://www.youtube.com/embed/${youtubeId}?enablejsapi=1&origin=https://benwiley.org`
     return (
       <div className="speaking_entry">
         <h3>{title}</h3>
@@ -19,7 +34,7 @@ class SpeakingEntry extends PureComponent {
           <br />
           {conferenceName}
         </p>
-        <iframe src={youtubeUrl} frameborder={0} />
+        <iframe src={getYoutubeUrl(youtubeId)} frameborder={0} />
         <p>{description}</p>
       </div>
     )
