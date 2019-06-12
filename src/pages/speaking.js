@@ -21,7 +21,11 @@ const Speaking = props => (
     />
     <h1>Speaking</h1>
     {speaking.map(talk => (
-      <SpeakingEntry key={talk.title} {...talk} />
+      <SpeakingEntry
+        {...talk}
+        key={talk.title}
+        location={props.location}
+      />
     ))}
   </Fragment>
 )

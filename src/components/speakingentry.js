@@ -8,13 +8,18 @@ const youtubeParams = {
   origin: 'https://benwiley.org',
   color: 'white',
 }
-const stringifiedYoutubeParams = Object
-  .keys(youtubeParams)
-  .map(key => `${key}=${youtubeParams[key]}`)
-  .join('&')
+const stringifiedYoutubeParams = referrer => {
+  return (
+    Object
+      .keys(youtubeParams)
+      .map(key => `${key}=${youtubeParams[key]}`)
+      .concat(`widget_referrer=${referrer}`)
+      .join('&')
+  );
+}
 
-function getYoutubeUrl(youtubeId) {
-  return `${youtubeBasePath}/${youtubeId}?${stringifiedYoutubeParams}`
+function getYoutubeUrl({ youtubeId, referrer }) {
+  return `${youtubeBasePath}/${youtubeId}?${stringifiedYoutubeParams(referrer)}`
 }
 
 class SpeakingEntry extends PureComponent {
@@ -25,6 +30,7 @@ class SpeakingEntry extends PureComponent {
       conferenceDate,
       description,
       youtubeId,
+      location
     } = this.props
     return (
       <div className="speaking_entry">
@@ -35,8 +41,8 @@ class SpeakingEntry extends PureComponent {
           {conferenceName}
         </p>
         <iframe
-          src={getYoutubeUrl(youtubeId)}
-          frameborder={0}
+          src={getYoutubeUrl({ youtubeId, referrer: location.href })}
+          frameBorder={0}
           allowFullScreen
         />
         <p>{description}</p>
