@@ -34,7 +34,11 @@ class SpeakingEntry extends PureComponent {
           <br />
           {conferenceName}
         </p>
-        <iframe src={getYoutubeUrl(youtubeId)} frameborder={0} />
+        <iframe
+          src={getYoutubeUrl(youtubeId)}
+          frameborder={0}
+          allowFullScreen
+        />
         <p>{description}</p>
       </div>
     )
