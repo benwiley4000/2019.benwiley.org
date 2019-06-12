@@ -44,15 +44,17 @@ class Music extends PureComponent {
           keywords={['Ben Wiley', 'Music', 'Soundtrack', 'Games', 'Themes']}
         />
         <h1>Music</h1>
-        {playlist.map((track, i) => (
-          <SongEntry
-            entryRef={i === activeTrackIndex ? this.activeEntryRef : null}
-            key={track.url}
-            track={track}
-            trackIndex={i}
-            active={this.state.mounted && activeTrackIndex === i}
-          />
-        ))}
+        <div className="song_entries">
+          {playlist.map((track, i) => (
+            <SongEntry
+              entryRef={i === activeTrackIndex ? this.activeEntryRef : null}
+              key={track.url}
+              track={track}
+              trackIndex={i}
+              active={this.state.mounted && activeTrackIndex === i}
+            />
+          ))}
+        </div>
         <ProfileImage
           filename="game_jam.jpg"
           caption="Composing the soundtrack for the game Sk8Border at the Montréal Anti-Fascist Game Jam (Apr 2018)"
