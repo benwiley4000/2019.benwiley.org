@@ -46,9 +46,10 @@ class MusicBar extends React.PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    const currentlyOnMusic = onMusic(this.props)
-    const previouslyOnMusic = onMusic(prevProps)
-    if (currentlyOnMusic !== previouslyOnMusic) {
+    if (
+      this.props.activeTrackIndex !== prevProps.activeTrackIndex ||
+      onMusic(this.props) !== onMusic(prevProps)
+    ) {
       this.checkIfTrackVisible()
     }
   }
