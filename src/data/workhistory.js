@@ -2,11 +2,25 @@ import React, { Fragment } from 'react'
 
 export default [
   {
+    employer: 'Element AI',
+    title: 'AI Software Developer',
+    location: 'Montréal, Québec, Canada',
+    startDate: 'February 2020',
+    endDate: null,
+    contract: false,
+    bulletPoints: [
+      'Developing UI architecture, components and applications for a machine learning software platform',
+      'Working closely with backend API developers, designers, product owners and clients (internal and external) to introduce new features to the platform',
+      'Implementing key performance optimizations in highly data-intensive applications',
+      'Developing tooling used by other developers to build new applications on the platform'
+    ],
+  },
+  {
     employer: 'Autodesk',
     title: 'Software Developer',
     location: 'Montréal, Québec, Canada',
     startDate: 'January 2017',
-    endDate: null,
+    endDate: 'January 2020',
     contract: false,
     bulletPoints: [
       <Fragment>
@@ -16,7 +30,7 @@ export default [
       </Fragment>,
       'Role focused on in-app visualization of data belonging to Shotgun clients',
       'Frequent context-switching between large legacy code base and newer stack including React and GraphQL',
-      'Helping lead way on migrating portions of legacy app to newer stack',
+      'Helping lead way on migrating portions of legacy app to newer stack'
     ],
   },
   {
