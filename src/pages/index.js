@@ -26,10 +26,10 @@ const IndexPage = props => (
     />
     <p style={{ fontSize: '1.2em' }}>I'm a programmer, musician and speaker.</p>
     <p>
-      When I'm not working on open source software or developing indie video
-      games, I'm probably at my day job at Autodesk. There I help build a tool
-      called Shotgun, which facilitates production tracking and media
-      collaboration for blockbuster films and AAA games.
+      When I'm not working on open source software, making music or developing indie video
+      games, I'm probably at my day job at Element AI. There I help build a platform that
+      helps artificial intelligence researchers run experiments and build products around
+      cutting-edge machine learning techniques.
     </p>
     <p>
       Sometimes I give presentations on topics related to programming at meetups
@@ -41,7 +41,7 @@ const IndexPage = props => (
       In 2015 I received a Bachelor of Arts (B.A.) in Sociology and a Minor in
       Computer Science from Davidson College in Davidson, North Carolina, USA.
     </p>
-    <ProfileImage filename="heardofwhat.jpg" />
+    <ProfileImage filename="ben_new_2.jpg" />
   </Fragment>
 )
 
