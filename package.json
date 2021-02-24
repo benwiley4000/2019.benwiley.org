@@ -41,7 +41,7 @@
     "gh-pages": "^2.0.1",
     "gif-frames": "^1.0.1",
     "mkdirp": "^0.5.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.15.2"
   },
   "repository": {
