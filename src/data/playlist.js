@@ -4,16 +4,26 @@ import React, { Fragment } from 'react'
 
 export default [
   {
-    title: 'Home is Where the Heart Is',
-    url: withPrefix('/audio/home_is_where_the_heart_is.mp3'),
-    artwork: [{ src: withPrefix('/album_artwork/home.jpg') }],
-    duration: '2:32',
+    title: 'Casal Domingo Lockdown Song',
+    url: withPrefix('/audio/casal_domingo.mp3'),
+    artwork: [{ src: withPrefix('/album_artwork/casal_domingo.png') }],
+    duration: '1:10',
     meta: {
       description: (
         <Fragment>
-          From the game <i>Home is Where the Heart Is</i>, this track blends
-          inspiration from <i>Animal Crossing</i> and <i>Law and Order</i> to
-          evoke a slow but determined search for home ownership.
+          I composed and recorded music, and adapted original lyrics, for a
+          video ad that received 150,000 views on Facebook. Lyrics in French,
+          performed by{' '}
+          <a href="https://www.facebook.com/marilynehumour" target="_blank">
+            Marilyne - Tout en Humour
+          </a>
+          . Scenario: stay-at-home mom records song at home about her struggles
+          during lockdown, finds solace in <i>Casal Domingo</i> non-alcholic
+          wine coolers. You can view the ad{' '}
+          <a href="https://fb.watch/dFZZt1QfUi/" target="_blank">
+            here
+          </a>
+          .
         </Fragment>
       ),
     },
@@ -29,6 +39,21 @@ export default [
           Created for the game <i>Sk8Border</i>, this is the result of trying to
           make an 80's-style punk song about knocking down a wall, with the
           sonic limitations of an 80's-style video game console.
+        </Fragment>
+      ),
+    },
+  },
+  {
+    title: 'Home is Where the Heart Is',
+    url: withPrefix('/audio/home_is_where_the_heart_is.mp3'),
+    artwork: [{ src: withPrefix('/album_artwork/home.jpg') }],
+    duration: '2:32',
+    meta: {
+      description: (
+        <Fragment>
+          From the game <i>Home is Where the Heart Is</i>, this track blends
+          inspiration from <i>Animal Crossing</i> and <i>Law and Order</i> to
+          evoke a slow but determined search for home ownership.
         </Fragment>
       ),
     },

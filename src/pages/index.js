@@ -26,16 +26,17 @@ const IndexPage = props => (
     />
     <p style={{ fontSize: '1.2em' }}>I'm a programmer, musician and speaker.</p>
     <p>
-      When I'm not working on open source software, making music or developing indie video
-      games, I'm probably at my day job at Element AI. There I help build a platform that
-      helps artificial intelligence researchers run experiments and build products around
-      cutting-edge machine learning techniques.
+      When I'm not working on open source software, making music, developing
+      indie video games, enjoying the very short summers in Montréal, or
+      sleeping, then I'm probably at my day job, currently with ExPretio
+      Technologies. I specialize in user interfaces, rendering performance and
+      audio, among other areas.
     </p>
     <p>
       Sometimes I give presentations on topics related to programming at meetups
-      and conferences. In the past I've also led workshops on jazz improvisation
-      and student organizing. I'm a native English speaker, and these days, my
-      French isn't too bad either.
+      and conferences. In the past I've also taught workshops on jazz
+      improvisation and student organizing. I'm a native English speaker, and I
+      speak French fluently.
     </p>
     <p>
       In 2015 I received a Bachelor of Arts (B.A.) in Sociology and a Minor in

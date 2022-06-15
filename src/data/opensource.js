@@ -72,7 +72,7 @@ export default [
       {
         projectName: 'pico8-to-lua',
         description:
-          "A command-line utility that converts the PICO-8 variety of extended Lua syntax to standard Lua syntax.",
+          'A command-line utility that converts the PICO-8 variety of extended Lua syntax to standard Lua syntax.',
         programmingLanguages: ['Lua'],
         repositoryLink: 'https://github.com/benwiley4000/pico8-to-lua',
       },
@@ -95,6 +95,13 @@ export default [
   {
     categoryTitle: 'Applications',
     entries: [
+      {
+        projectName: 'Volca Sampler',
+        description:
+          'Web app (desktop + mobile) for capturing musical samples and transferring them to the Volca Sample sample-based synthesizer',
+        programmingLanguages: ['Javascript', 'C', 'TypeScript (JSDoc)', 'SCSS'],
+        repositoryLink: 'https://github.com/benwiley4000/volca-sampler',
+      },
       {
         projectName: 'steam-party-planner',
         description:

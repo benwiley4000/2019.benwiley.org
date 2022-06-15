@@ -2,17 +2,30 @@ import React, { Fragment } from 'react'
 
 export default [
   {
-    employer: 'Element AI',
-    title: 'AI Software Developer',
+    employer: 'ExPretio Technologies',
+    title: 'Front-End Development Tech Lead',
     location: 'Montréal, Québec, Canada',
-    startDate: 'February 2020',
+    startDate: 'May 2021',
     endDate: null,
     contract: false,
     bulletPoints: [
-      'Developing UI architecture, components and applications for a machine learning software platform',
-      'Working closely with backend API developers, designers, product owners and clients (internal and external) to introduce new features to the platform',
-      'Implementing key performance optimizations in highly data-intensive applications',
-      'Developing tooling used by other developers to build new applications on the platform'
+      'Helping to guide a transition from a desktop Java frontend to one built with React and TypeScript for the web, for an application that has been used by major railway companies for over 10 years to optimize their revenues',
+      'Big focus on guiding junior developers on the team (code reviews, pair programming, etc.)',
+      'Responsible for spearheading transition toward new end-to-end automation testing framework (Playwright) and training developers to write strong automated tests',
+    ],
+  },
+  {
+    employer: 'Element AI (ServiceNow)',
+    title: 'AI Software Developer',
+    location: 'Montréal, Québec, Canada',
+    startDate: 'February 2020',
+    endDate: 'May 2021',
+    contract: false,
+    bulletPoints: [
+      'Developed UI architecture, components and applications for a machine learning software platform',
+      'Worked closely with backend API developers, designers, product owners and clients (internal and external) to introduce new features to the platform',
+      'Implemented key performance optimizations in highly data-intensive applications',
+      'Developed tooling used by other developers to build new applications on the platform',
     ],
   },
   {
@@ -30,7 +43,7 @@ export default [
       </Fragment>,
       'Role focused on in-app visualization of data belonging to Shotgun clients',
       'Frequent context-switching between large legacy code base and newer stack including React and GraphQL',
-      'Helping lead way on migrating portions of legacy app to newer stack'
+      'Helping lead way on migrating portions of legacy app to newer stack',
     ],
   },
   {
