@@ -7,7 +7,7 @@ export default [
     title: 'Casal Domingo Lockdown Song',
     url: withPrefix('/audio/casal_domingo.mp3'),
     artwork: [{ src: withPrefix('/album_artwork/casal_domingo.png') }],
-    duration: '1:10',
+    duration: '0:57',
     meta: {
       description: (
         <Fragment>
