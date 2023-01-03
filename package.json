@@ -9,7 +9,7 @@
     "@cassette/components": "^2.0.0-alpha.31",
     "@cassette/core": "^2.0.0-alpha.31",
     "@cassette/player": "^2.0.0-alpha.31",
-    "gatsby": "^2.0.76",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.16",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "gatsby-cli": "^2.4.8",
-    "gatsby-plugin-sass": "^2.0.7",
+    "gatsby-plugin-sass": "^6.3.1",
     "gh-pages": "^2.0.1",
     "gif-frames": "^1.0.1",
     "mkdirp": "^0.5.1",
