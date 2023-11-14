@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 import { PlayerContextProvider } from '@cassette/core'
-import fairAnalytics from '@benwiley4000/fair-analytics-client-beacon-api'
+// import fairAnalytics from '@benwiley4000/fair-analytics-client-beacon-api'
 
 import playlist from './src/data/playlist'
 import Layout from './src/components/layout'
@@ -54,139 +54,139 @@ export const wrapPageElement = ({ element, props }) => {
 
 // EVERYTHING BELOW CONCERNS ANALYTICS
 
-const fa = fairAnalytics({
-  url: process.env.ANALYTICS_URL,
-})
+// const fa = fairAnalytics({
+//   url: process.env.ANALYTICS_URL,
+// })
 
-function sendAnalytics(data, guaranteeRequest = false) {
-  let pathname = data.pathname || window.location.pathname
-  if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
-    pathname = pathname.slice(0, -1)
-  }
-  const { host } = window.location
-  fa.send(
-    {
-      ...data,
-      pathname,
-      host,
-    },
-    guaranteeRequest
-  )
-}
+// function sendAnalytics(data, guaranteeRequest = false) {
+//   let pathname = data.pathname || window.location.pathname
+//   if (pathname.length > 1 && pathname[pathname.length - 1] === '/') {
+//     pathname = pathname.slice(0, -1)
+//   }
+//   const { host } = window.location
+//   fa.send(
+//     {
+//       ...data,
+//       pathname,
+//       host,
+//     },
+//     guaranteeRequest
+//   )
+// }
 
-export const onInitialClientRender = () => {
-  sendAnalytics({
-    event: 'routeLoadedAsHTML',
-    referrer: document.referrer,
-  })
-  setupMediaAnalytics()
-}
+// export const onInitialClientRender = () => {
+//   sendAnalytics({
+//     event: 'routeLoadedAsHTML',
+//     referrer: document.referrer,
+//   })
+//   setupMediaAnalytics()
+// }
 
-export const onRouteUpdate = ({ location }) => {
-  sendAnalytics({
-    event: 'routeRendered',
-    pathname: location.pathname,
-  })
-}
+// export const onRouteUpdate = ({ location }) => {
+//   sendAnalytics({
+//     event: 'routeRendered',
+//     pathname: location.pathname,
+//   })
+// }
 
-function setupMediaAnalytics() {
-  const media = document.querySelector('video')
-  let lastTimeAtSeekingStart = media.currentTime
-  let pendingSeekReport = false
-  let pendingNewTrackTimeout = true
+// function setupMediaAnalytics() {
+//   const media = document.querySelector('video')
+//   let lastTimeAtSeekingStart = media.currentTime
+//   let pendingSeekReport = false
+//   let pendingNewTrackTimeout = true
 
-  media.addEventListener('emptied', () => {
-    pendingNewTrackTimeout = true
-  })
-  media.addEventListener('canplay', () => {
-    setTimeout(() => {
-      pendingNewTrackTimeout = false
-    }, 100)
-  })
-  media.addEventListener('timeupdate', () => {
-    if (pendingSeekReport) {
-      return
-    }
-    lastTimeAtSeekingStart = media.currentTime
-  })
-  media.addEventListener('seeking', () => {
-    if (pendingNewTrackTimeout) {
-      return
-    }
-    pendingSeekReport = true
-  })
-  media.addEventListener('play', () => {
-    sendAnalytics(getMediaAnalyticsProperties('mediaPlayed'))
-  })
-  media.addEventListener('pause', () => {
-    sendAnalytics(getMediaAnalyticsProperties('mediaPaused'))
-  })
-  let seekTimeout
-  media.addEventListener('seeked', () => {
-    if (pendingNewTrackTimeout) {
-      return
-    }
-    const event = {
-      ...getMediaAnalyticsProperties('mediaSeeked'),
-      previousTime: lastTimeAtSeekingStart,
-    }
-    clearTimeout(seekTimeout)
-    seekTimeout = setTimeout(() => {
-      sendAnalytics(event)
-      pendingSeekReport = false
-    }, 700)
-  })
-  media.addEventListener('ended', () => {
-    if (pendingSeekReport) {
-      return
-    }
-    sendAnalytics(getMediaAnalyticsProperties('mediaEndedNaturally'))
-  })
+//   media.addEventListener('emptied', () => {
+//     pendingNewTrackTimeout = true
+//   })
+//   media.addEventListener('canplay', () => {
+//     setTimeout(() => {
+//       pendingNewTrackTimeout = false
+//     }, 100)
+//   })
+//   media.addEventListener('timeupdate', () => {
+//     if (pendingSeekReport) {
+//       return
+//     }
+//     lastTimeAtSeekingStart = media.currentTime
+//   })
+//   media.addEventListener('seeking', () => {
+//     if (pendingNewTrackTimeout) {
+//       return
+//     }
+//     pendingSeekReport = true
+//   })
+//   media.addEventListener('play', () => {
+//     sendAnalytics(getMediaAnalyticsProperties('mediaPlayed'))
+//   })
+//   media.addEventListener('pause', () => {
+//     sendAnalytics(getMediaAnalyticsProperties('mediaPaused'))
+//   })
+//   let seekTimeout
+//   media.addEventListener('seeked', () => {
+//     if (pendingNewTrackTimeout) {
+//       return
+//     }
+//     const event = {
+//       ...getMediaAnalyticsProperties('mediaSeeked'),
+//       previousTime: lastTimeAtSeekingStart,
+//     }
+//     clearTimeout(seekTimeout)
+//     seekTimeout = setTimeout(() => {
+//       sendAnalytics(event)
+//       pendingSeekReport = false
+//     }, 700)
+//   })
+//   media.addEventListener('ended', () => {
+//     if (pendingSeekReport) {
+//       return
+//     }
+//     sendAnalytics(getMediaAnalyticsProperties('mediaEndedNaturally'))
+//   })
 
-  const headerMediaProgress = document.querySelector('.media_progress_wrapper')
-  document.addEventListener('click', e => {
-    for (let i = 0; i < e.path.length; i++) {
-      if (e.path[i] === headerMediaProgress) {
-        sendAnalytics(getMediaAnalyticsProperties('musicHeaderClicked'))
-        break
-      }
-    }
-  })
+//   const headerMediaProgress = document.querySelector('.media_progress_wrapper')
+//   document.addEventListener('click', e => {
+//     for (let i = 0; i < e.path.length; i++) {
+//       if (e.path[i] === headerMediaProgress) {
+//         sendAnalytics(getMediaAnalyticsProperties('musicHeaderClicked'))
+//         break
+//       }
+//     }
+//   })
 
-  function getMediaAnalyticsProperties(eventName) {
-    return {
-      event: eventName,
-      mediaSrc: media.src,
-      currentTime: media.currentTime,
-    }
-  }
-}
+//   function getMediaAnalyticsProperties(eventName) {
+//     return {
+//       event: eventName,
+//       mediaSrc: media.src,
+//       currentTime: media.currentTime,
+//     }
+//   }
+// }
 
-document.addEventListener('click', e => {
-  let a
-  for (let i = 0; i < e.path.length; i++) {
-    const elem = e.path[i]
-    if (elem.tagName === 'A') {
-      a = elem
-      break
-    }
-  }
-  if (a) {
-    sendAnalytics({
-      event: 'linkClicked',
-      href: a.href,
-    })
-  }
-})
+// document.addEventListener('click', e => {
+//   let a
+//   for (let i = 0; i < e.path.length; i++) {
+//     const elem = e.path[i]
+//     if (elem.tagName === 'A') {
+//       a = elem
+//       break
+//     }
+//   }
+//   if (a) {
+//     sendAnalytics({
+//       event: 'linkClicked',
+//       href: a.href,
+//     })
+//   }
+// })
 
-window.addEventListener('beforeunload', () => {
-  sendAnalytics({ event: 'unloadingPage' }, true)
-})
+// window.addEventListener('beforeunload', () => {
+//   sendAnalytics({ event: 'unloadingPage' }, true)
+// })
 
-console.log(`
-This site is tracking anonymous analytics using Fair Analytics.
-All collected data is stored on my own domain and is auditable. To learn more
-about how you can audit this site's analytics, read the Fair Analytics Endpoints
-documentation at https://github.com/vesparny/fair-analytics#endpoints.
-The analytics url is: ${process.env.ANALYTICS_URL}
-`)
+// console.log(`
+// This site is tracking anonymous analytics using Fair Analytics.
+// All collected data is stored on my own domain and is auditable. To learn more
+// about how you can audit this site's analytics, read the Fair Analytics Endpoints
+// documentation at https://github.com/vesparny/fair-analytics#endpoints.
+// The analytics url is: ${process.env.ANALYTICS_URL}
+// `)
