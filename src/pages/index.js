@@ -24,20 +24,39 @@ const IndexPage = props => (
       filename="cassette_presentation.jpg"
       caption="Presenting my media player library, Cassette, at the JavaScript Montréal Meetup (Dec 2018)"
     />
-    <p style={{ fontSize: '1.2em' }}>I'm a programmer, musician and speaker.</p>
-    <p>
-      When I'm not working on open source software, making music, developing
-      indie video games, enjoying the very short summers in Montréal, or
-      sleeping, then I'm probably at my day job, currently with ExPretio
-      Technologies. I specialize in user interfaces, rendering performance and
-      audio, among other areas.
+    <p style={{ fontSize: '1.2em' }}>
+      I'm a programmer and musician based in Montréal, Québec.
     </p>
     <p>
-      Sometimes I give presentations on topics related to programming at meetups
-      and conferences. In the past I've also taught workshops on jazz
-      improvisation and student organizing. I'm a native English speaker, and I
-      speak French fluently.
+      As a programmer, I specialize in user interfaces, rendering performance,
+      and audio, among other areas.
     </p>
+    <p>
+      As a musician, I've created soundtracks for video games, web ads and TV.
+    </p>
+    <p>
+      I also create electronic funk music and perform around Montréal as{' '}
+      <a
+        href="https://www.instagram.com/benthere.donethat.mtl/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Benthere Donethat
+      </a>
+      .
+    </p>
+    <p>
+      My day job is at{' '}
+      <a href="https://3dverse.com/" rel="noreferrer" target="_blank">
+        3dverse
+      </a>
+      , where I work on their cloud-based realtime 3d platform.
+    </p>
+    <p>
+      My previous employers have included Autodesk, Element AI (a.k.a.
+      ServiceNow Research), and Ubisoft.
+    </p>
+    <p>I'm a native English speaker, and I speak French fluently.</p>
     <p>
       In 2015 I received a Bachelor of Arts (B.A.) in Sociology and a Minor in
       Computer Science from Davidson College in Davidson, North Carolina, USA.

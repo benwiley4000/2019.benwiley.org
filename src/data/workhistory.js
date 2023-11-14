@@ -2,14 +2,34 @@ import React, { Fragment } from 'react'
 
 export default [
   {
+    employer: '3dverse',
+    title: 'Full Stack Developer',
+    location: 'Montréal, Québec, Canada',
+    startDate: 'April 2023',
+    endDate: null,
+    contract: false,
+    bulletPoints: [
+      '3dverse is a platform that supports real-time, collaborative 3D applications that render in the cloud, so they can be used from any device',
+    ],
+  },
+  {
+    employer: 'Ubisoft Montréal',
+    title: 'UI Programmer',
+    location: 'Montréal, Québec, Canada',
+    startDate: 'September 2022',
+    endDate: 'February 2023',
+    contract: false,
+    bulletPoints: ["C++ UI Programmer on Tom Clancy's Rainbow Six Siege"],
+  },
+  {
     employer: 'ExPretio Technologies',
     title: 'Front-End Development Tech Lead',
     location: 'Montréal, Québec, Canada',
     startDate: 'May 2021',
-    endDate: null,
+    endDate: 'August 2022',
     contract: false,
     bulletPoints: [
-      'Helping to guide a transition from a desktop Java frontend to one built with React and TypeScript for the web, for an application that has been used by major railway companies for over 10 years to optimize their revenues',
+      'Helped to guide a transition from a desktop Java frontend to one built with React and TypeScript for the web, for an application that has been used by major railway companies for over 10 years to optimize their revenues',
       'Big focus on guiding junior developers on the team (code reviews, pair programming, etc.)',
       'Responsible for spearheading transition toward new end-to-end automation testing framework (Playwright) and training developers to write strong automated tests',
     ],

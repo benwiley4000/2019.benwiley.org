@@ -869,3 +869,11 @@ $cassette_btn_bg_color: $black;
     }
   }
 }
+
+.skills-gradient {
+  background-image: linear-gradient(green, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

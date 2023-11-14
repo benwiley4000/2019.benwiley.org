@@ -1,12 +1,34 @@
 import { withPrefix } from 'gatsby'
 
 import React, { Fragment } from 'react'
-
 export default [
+  {
+    title: 'Sauve Ma Recette Title Theme',
+    url: withPrefix('/audio/sauve_ma_recette.mp3'),
+    artwork: [{ src: withPrefix('/album_artwork/sauve_ma_recette.jpg') }],
+    duration: '0:29',
+    meta: {
+      description: (
+        <Fragment>
+          I composed and recorded the title theme for{' '}
+          <a
+            href="https://www.facebook.com/CuisinezTQc/videos/875468307021448
+"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sauve Ma Recette
+          </a>
+          , a web series from Télé-Québec featuring three chefs showing us how
+          to rescue doomed recipes.
+        </Fragment>
+      ),
+    },
+  },
   {
     title: 'Casal Domingo Lockdown Song',
     url: withPrefix('/audio/casal_domingo.mp3'),
-    artwork: [{ src: withPrefix('/album_artwork/casal_domingo.png') }],
+    artwork: [{ src: withPrefix('/album_artwork/casal_domingo.jpg') }],
     duration: '0:57',
     meta: {
       description: (
@@ -14,7 +36,11 @@ export default [
           I composed and recorded music, and adapted original lyrics, for a
           video ad that received 150,000 views on Facebook. Lyrics in French,
           performed by{' '}
-          <a href="https://www.facebook.com/marilynehumour" target="_blank">
+          <a
+            href="https://www.facebook.com/marilynehumour"
+            target="_blank"
+            rel="noreferrer"
+          >
             Marilyne - Tout en Humour
           </a>
           . Scenario: stay-at-home mom records song at home about her struggles
