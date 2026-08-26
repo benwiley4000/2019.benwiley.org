@@ -13,15 +13,26 @@ class OpenSourceCategory extends PureComponent {
             description,
             programmingLanguages,
             repositoryLink,
+            site,
+            img,
           }) => (
             <div key={projectName} className="opensource_entry">
               <h4>
-                <a href={repositoryLink}>{projectName}</a>
+                <a href={site || repositoryLink}>{projectName}</a>
               </h4>
+              {img && <img src={img} width={300} />}
               <p className="description">{description}</p>
               <p className="languages">
                 <strong>Programming languages: </strong>
                 {programmingLanguages.join(', ')}
+                {site && (
+                  <>
+                    <br />
+                    <small>
+                      <a href={repositoryLink}>Open source repository</a>
+                    </small>
+                  </>
+                )}
               </p>
             </div>
           )

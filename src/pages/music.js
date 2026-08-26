@@ -5,6 +5,7 @@ import SongEntry from '../components/songentry'
 import ProfileImage from '../components/profileimage'
 
 import { playerContextFilter } from '@cassette/core'
+import { withPrefix } from 'gatsby'
 
 class Music extends PureComponent {
   constructor(props) {
@@ -44,6 +45,27 @@ class Music extends PureComponent {
           keywords={['Ben Wiley', 'Music', 'Soundtrack', 'Games', 'Themes']}
         />
         <h1>Music</h1>
+        <p>
+          I make and perform electronic funk music as{' '}
+          <strong>Benthere Donethat</strong>. You can find me on social media
+          and music distribution platforms{' '}
+          <a href="https://bentheredoneth.at">here</a>!
+        </p>
+        <p>
+          Below are some tracks from the latest game I composed for,{' '}
+          <i>Fashion FUPA</i>, created by{' '}
+          <a href="https://fufroom.art/">Fufroom</a>. You can download the
+          soundtrack from{' '}
+          <a href="https://benwiley4000.bandcamp.com/album/fashion-fupa-official-game-soundtrack">
+            Bandcamp
+          </a>{' '}
+          and you can get <i>Fashion FUPA</i> on{' '}
+          <a href="https://store.steampowered.com/app/4492290/Fashion_FUPA/">
+            Steam
+          </a>
+          !
+        </p>
+        <img src="/album_artwork/fashion_fupa.png" width={300} />
         <div className="song_entries">
           {playlist.map((track, i) => (
             <SongEntry
@@ -55,10 +77,6 @@ class Music extends PureComponent {
             />
           ))}
         </div>
-        <ProfileImage
-          filename="game_jam.jpg"
-          caption="Composing the soundtrack for the game Sk8Border at the Montréal Anti-Fascist Game Jam (Apr 2018)"
-        />
       </Fragment>
     )
   }

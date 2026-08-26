@@ -1,4 +1,20 @@
+import { withPrefix } from 'gatsby'
+
 export default [
+  {
+    categoryTitle: 'Applications',
+    entries: [
+      {
+        projectName: 'Volca Sampler',
+        description:
+          'Web app (desktop + mobile) for capturing musical samples and transferring them, over audio jack cable, to the KORG Volca Sample sample-based synthesizer.',
+        programmingLanguages: ['Javascript', 'C', 'TypeScript (JSDoc)', 'SCSS'],
+        repositoryLink: 'https://github.com/benwiley4000/volca-sampler',
+        site: 'https://volcasampler.com',
+        img: withPrefix('/project_images/volca-sampler-splash.png'),
+      },
+    ],
+  },
   {
     categoryTitle: 'UI Component Libraries',
     entries: [
@@ -15,20 +31,8 @@ export default [
           'A React media player component inspired by the Media Player app that shipped with Windows 95. Also powered by Cassette!',
         programmingLanguages: ['JavaScript'],
         repositoryLink: 'https://github.com/benwiley4000/win95-media-player',
-      },
-      {
-        projectName: 'React GIF Player',
-        description:
-          'A component for React that allows a user to toggle a GIF animation on and off.',
-        programmingLanguages: ['JavaScript', 'CSS'],
-        repositoryLink: 'https://github.com/benwiley4000/react-gif-player',
-      },
-      {
-        projectName: 'react-dot-fragment',
-        description:
-          "A small polyfill implementation of React 16's Fragment component which is compatible with React 15.",
-        programmingLanguages: ['JavaScript'],
-        repositoryLink: 'https://github.com/benwiley4000/react-dot-fragment',
+        site: 'https://benwiley4000.github.io/win95-media-player/',
+        img: withPrefix('/project_images/win95-media-player.png'),
       },
     ],
   },
@@ -89,32 +93,6 @@ export default [
           'A function that can bind an arbitrary browser UI element as a touch-friendly PICO-8 game control.',
         programmingLanguages: ['JavaScript'],
         repositoryLink: 'https://github.com/benwiley4000/tiny-pico8-touch-ui',
-      },
-    ],
-  },
-  {
-    categoryTitle: 'Applications',
-    entries: [
-      {
-        projectName: 'Volca Sampler',
-        description:
-          'Web app (desktop + mobile) for capturing musical samples and transferring them to the Volca Sample sample-based synthesizer',
-        programmingLanguages: ['Javascript', 'C', 'TypeScript (JSDoc)', 'SCSS'],
-        repositoryLink: 'https://github.com/benwiley4000/volca-sampler',
-      },
-      {
-        projectName: 'steam-party-planner',
-        description:
-          'Tracks a pool of Steam user accounts and compiles data about games held in common between them. Built on top of the Steam Web API.',
-        programmingLanguages: ['JavaScript', 'HTML', 'CSS'],
-        repositoryLink: 'https://github.com/benwiley4000/steam-party-planner',
-      },
-      {
-        projectName: 'Jazzerbot',
-        description:
-          'Asks the user for a few parameters, then outputs an improvised piece of blues music. This is the first application I built (I was 15 years old).',
-        programmingLanguages: ['Java'],
-        repositoryLink: 'https://github.com/benwiley4000/jazzerbot',
       },
     ],
   },

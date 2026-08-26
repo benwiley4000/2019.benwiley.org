@@ -2,6 +2,32 @@ import { withPrefix } from 'gatsby'
 
 export default [
   {
+    title: 'Fashion FUPA',
+    description:
+      'A tiny, point-and-click dress-up game for your Fat Upper Pelvic Area. ',
+    teamMembers: ['Fufroom'],
+    myContribution: 'Music',
+    platforms: ['Windows', 'Mac', 'Linux'],
+    links: [
+      {
+        url: 'https://store.steampowered.com/app/4492290/Fashion_FUPA',
+        text: 'Get it on Steam',
+      },
+      {
+        url: 'https://fashionfupa.com',
+        text: 'Website and creation board',
+      },
+      {
+        url:
+          'https://benwiley4000.bandcamp.com/album/fashion-fupa-official-game-soundtrack',
+        text: 'Official soundtrack',
+      },
+    ],
+    gif: withPrefix('/gifs/fupa_optimized.gif'),
+    still: withPrefix('/gifs/stills/fupa_optimized.png'),
+    gifVideo: withPrefix('/gifs/fupa_optimized.mp4'),
+  },
+  {
     title: 'Sk8Border',
     description:
       'Lay that Wall to Waste! This game was created in Montréal in March/April 2018 for the Anti-Fascist Game Jam.',

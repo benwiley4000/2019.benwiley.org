@@ -28,8 +28,8 @@ const OpenSource = props => (
     <h1>Open Source</h1>
     <p>
       Below is a selection of open source software projects I have authored.
-      Additionally, all the <Link to="/games">games</Link> I've worked on are
-      open source.
+      Also, all the <Link to="/games">games</Link> I've programmed on are open
+      source.
     </p>
     {opensource.map(category => (
       <OpenSourceCategory key={category.categoryTitle} {...category} />

@@ -32,12 +32,20 @@ class GameEntry extends PureComponent {
           <br />
           <b>Platform: </b>
           {platforms.join(', ')}
-          <br />
-          <b>Programming language: </b>
-          {programmingLanguage}
-          <br />
-          <b>Game engine: </b>
-          {engine}
+          {programmingLanguage && (
+            <>
+              <br />
+              <b>Programming language: </b>
+              {programmingLanguage}
+            </>
+          )}
+          {engine && (
+            <>
+              <br />
+              <b>Game engine: </b>
+              {engine}
+            </>
+          )}
           <br />
           {links.reduce((elements, link) => {
             elements.push(

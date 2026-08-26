@@ -2,11 +2,22 @@ import React, { Fragment } from 'react'
 
 export default [
   {
+    employer: 'Prevu3D',
+    title: 'Full Stack Developer',
+    location: 'Montréal, Québec, Canada',
+    startDate: 'July 2024',
+    endDate: null,
+    contract: false,
+    bulletPoints: [
+      'Prevu3D renders stacked representations (pointcloud, mesh, cad, splat, photo, etc) of industrial spaces, on desktop and web, and has asset segmentation, metadata tools, and external product integrations.',
+    ],
+  },
+  {
     employer: '3dverse',
     title: 'Full Stack Developer',
     location: 'Montréal, Québec, Canada',
     startDate: 'April 2023',
-    endDate: null,
+    endDate: 'May 2024',
     contract: false,
     bulletPoints: [
       '3dverse is a platform that supports real-time, collaborative 3D applications that render in the cloud, so they can be used from any device',
@@ -89,7 +100,7 @@ export default [
     bulletPoints: [
       'Collaborated with small, agile team using Node.js, React, Flux and MySQL, sharing full stack responsibilities',
       "Designed, implemented site-wide achievements system based on users' video/audio recording data",
-      "Contributed regularly to popular open-source software projects on company's behalf",
+      "Contributed regularly to popular open source software projects on company's behalf",
     ],
   },
   {

@@ -8,7 +8,7 @@ import writing from '../data/writing'
 const Writing = props => (
   <Fragment>
     <SEO
-      title="Writing"
+      title="Blog"
       keywords={[
         'Ben Wiley',
         'Writing',
@@ -17,14 +17,11 @@ const Writing = props => (
         'Artificial Intelligence',
       ]}
     />
-    <h1>Writing</h1>
+    <h1>Blog</h1>
     <p>
-      As well as the papers/articles below, I have a{' '}
-      <a href="http://blog.benwiley.org/">blog</a> which I update occasionally.
+      I have a <a href="http://blog.benwiley.org/">blog</a> focused on
+      programming topics. It gets updated once every few years!
     </p>
-    {writing.map(category => (
-      <WritingCategory key={category.categoryTitle} {...category} />
-    ))}
   </Fragment>
 )
 

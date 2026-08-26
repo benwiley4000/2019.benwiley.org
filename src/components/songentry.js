@@ -45,7 +45,7 @@ class SongEntry extends PureComponent {
           {track.title}
           <PlayPauseButton trackIndex={trackIndex} />
         </h3>
-        <p>{track.meta.description}</p>
+        {track.meta.description && <p>{track.meta.description}</p>}
         <div className={'song_entry_progress' + (active ? ' active' : '')}>
           <div className="info">
             {convertToTime(t)} / {convertToTime(dur)}

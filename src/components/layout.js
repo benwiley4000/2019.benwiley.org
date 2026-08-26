@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 import NavBar from './navbar'
 import './layout.scss'
 
@@ -28,7 +29,7 @@ const Layout = ({ children, childProps }) => (
         />
         <div
           style={{
-            margin: `0 auto`,
+            margin: `0 auto 30px`,
             maxWidth,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
@@ -38,6 +39,7 @@ const Layout = ({ children, childProps }) => (
           <NavBar navItems={navItems} />
           {children}
         </div>
+        <Footer />
       </>
     )}
   />

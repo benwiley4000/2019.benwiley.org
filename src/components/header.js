@@ -11,7 +11,9 @@ const playerContextFilterList = ['paused', 'activeTrackIndex']
 
 // thanks to https://stackoverflow.com/a/21627295
 function visibleY(el) {
-  var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height,
+  var rect = el.getBoundingClientRect(),
+    top = rect.top,
+    height = rect.height,
     el = el.parentNode
   // Check if bottom of the element is off the page
   if (rect.bottom < 0) return false
@@ -21,7 +23,7 @@ function visibleY(el) {
     rect = el.getBoundingClientRect()
     if (top <= rect.bottom === false) return false
     // Check if the element is out of view due to a container scrolling
-    if ((top + height) <= rect.top) return false
+    if (top + height <= rect.top) return false
     el = el.parentNode
   } while (el != document.body)
   return true
@@ -35,7 +37,7 @@ class MusicBar extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      hideMusicBarWhilePlaying: onMusic(props)
+      hideMusicBarWhilePlaying: onMusic(props),
     }
     this.checkIfTrackVisible = this.checkIfTrackVisible.bind(this)
   }
@@ -67,11 +69,11 @@ class MusicBar extends React.PureComponent {
   checkIfTrackVisible() {
     if (onMusic(this.props)) {
       this.setState({
-        hideMusicBarWhilePlaying: visibleY(this.findCurrentTrackEntryElement())
+        hideMusicBarWhilePlaying: visibleY(this.findCurrentTrackEntryElement()),
       })
     } else {
       this.setState({
-        hideMusicBarWhilePlaying: false
+        hideMusicBarWhilePlaying: false,
       })
     }
   }
@@ -130,12 +132,13 @@ const Header = ({ siteTitle, currentPathname }) => (
         <MediaPlayerControls controls={['playpause', 'forwardskip']} />
       </div>
       <PlayerContextConsumer filterList={playerContextFilterList}>
-        {({ paused, activeTrackIndex }) =>
+        {({ paused, activeTrackIndex }) => (
           <MusicBar
             currentPathname={currentPathname}
             paused={paused}
             activeTrackIndex={activeTrackIndex}
-          />}
+          />
+        )}
       </PlayerContextConsumer>
     </div>
   </div>

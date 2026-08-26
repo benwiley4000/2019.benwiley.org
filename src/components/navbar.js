@@ -6,29 +6,33 @@ const NavBar = ({ navItems }) => (
   <nav className="main_nav">
     {navItems.map(({ label, url }) => (
       <div className="nav_item" key={label}>
-        <Link
-          to={url}
-          getProps={({ location }) => {
-            const trimmed = {
-              pathname: location.pathname,
-              url: withPrefix(url),
-            }
-            for (const p of ['pathname', 'url']) {
-              // chop off any / at the end
-              while (
-                trimmed[p].length > 1 &&
-                trimmed[p][trimmed[p].length - 1] === '/'
-              ) {
-                trimmed[p] = trimmed[p].slice(0, -1)
+        {url.startsWith('http') ? (
+          <a href={url}>{label}</a>
+        ) : (
+          <Link
+            to={url}
+            getProps={({ location }) => {
+              const trimmed = {
+                pathname: location.pathname,
+                url: withPrefix(url),
               }
-            }
-            return trimmed.pathname === trimmed.url
-              ? { className: 'current' }
-              : null
-          }}
-        >
-          {label}
-        </Link>
+              for (const p of ['pathname', 'url']) {
+                // chop off any / at the end
+                while (
+                  trimmed[p].length > 1 &&
+                  trimmed[p][trimmed[p].length - 1] === '/'
+                ) {
+                  trimmed[p] = trimmed[p].slice(0, -1)
+                }
+              }
+              return trimmed.pathname === trimmed.url
+                ? { className: 'current' }
+                : null
+            }}
+          >
+            {label}
+          </Link>
+        )}
       </div>
     ))}
   </nav>

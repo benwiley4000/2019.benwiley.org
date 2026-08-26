@@ -9,41 +9,27 @@ const youtubeParams = {
   color: 'white',
 }
 const stringifiedYoutubeParams = referrer => {
-  return (
-    Object
-      .keys(youtubeParams)
-      .map(key => `${key}=${youtubeParams[key]}`)
-      .concat(`widget_referrer=${referrer}`)
-      .join('&')
-  );
+  return Object.keys(youtubeParams)
+    .map(key => `${key}=${youtubeParams[key]}`)
+    .concat(`widget_referrer=${referrer}`)
+    .join('&')
 }
 
 function getYoutubeUrl({ youtubeId, referrer }) {
   return `${youtubeBasePath}/${youtubeId}?${stringifiedYoutubeParams(referrer)}`
 }
 
-class SpeakingEntry extends PureComponent {
+class VideoEntry extends PureComponent {
   render() {
-    const {
-      title,
-      conferenceName,
-      conferenceDate,
-      description,
-      youtubeId,
-      location
-    } = this.props
+    const { title, description, youtubeId, vertical, location } = this.props
     return (
-      <div className="speaking_entry">
+      <div className="video_entry">
         <h3>{title}</h3>
-        <p className="time_and_place">
-          {conferenceDate}
-          <br />
-          {conferenceName}
-        </p>
         <iframe
           src={getYoutubeUrl({ youtubeId, referrer: location.href })}
           frameBorder={0}
           allowFullScreen
+          class={vertical ? 'vertical' : ''}
         />
         <p>{description}</p>
       </div>
@@ -51,12 +37,12 @@ class SpeakingEntry extends PureComponent {
   }
 }
 
-SpeakingEntry.propsTypes = {
+VideoEntry.propsTypes = {
   title: PropTypes.string.isRequired,
-  conferenceName: PropTypes.string.isRequired,
-  conferenceDate: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   youtubeId: PropTypes.string.isRequired,
+
+  vertical: PropTypes.bool.isRequired,
 }
 
-export default SpeakingEntry
+export default VideoEntry
