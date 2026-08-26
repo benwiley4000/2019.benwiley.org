@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[883],{9616:function(e,t,n){n.r(t);var a=n(7294),l=n(3751),r=n(5444);t.default=()=>a.createElement(a.Fragment,null,a.createElement(l.Z,{title:"404: Not found"}),a.createElement("h1",null,"404"),a.createElement("p",null,"If you think I broke something, you can"," ",a.createElement(r.Link,{to:"/contact"},"message me")," to let me know."))}}]);
+//# sourceMappingURL=component---src-pages-404-js-49cc9c12dad9223b7f19.js.map
