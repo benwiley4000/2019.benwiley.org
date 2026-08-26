@@ -29,7 +29,7 @@ class VideoEntry extends PureComponent {
           src={getYoutubeUrl({ youtubeId, referrer: location.href })}
           frameBorder={0}
           allowFullScreen
-          class={vertical ? 'vertical' : ''}
+          className={vertical ? 'vertical' : ''}
         />
         <p>{description}</p>
       </div>

@@ -8,7 +8,7 @@ const Footer = () => {
   const [hidden, setHidden] = useState(false)
   return (
     <marquee
-      ariaLabel={`${textPreSiteName} ${siteName} ${textPostSiteName}`}
+      aria-label={`${textPreSiteName} ${siteName} ${textPostSiteName}`}
       style={{
         position: 'fixed',
         bottom: hidden ? -30 : 0,
@@ -37,7 +37,7 @@ const Footer = () => {
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span class="clickable" onClick={() => setHidden(true)}>
+      <span className="clickable" onClick={() => setHidden(true)}>
         ɪ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ sᴇᴇ ᴛʜɪs ᴀɴʏᴍᴏʀᴇ.
       </span>
     </marquee>

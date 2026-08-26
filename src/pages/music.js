@@ -2,10 +2,8 @@ import React, { Fragment, PureComponent } from 'react'
 
 import SEO from '../components/seo'
 import SongEntry from '../components/songentry'
-import ProfileImage from '../components/profileimage'
 
 import { playerContextFilter } from '@cassette/core'
-import { withPrefix } from 'gatsby'
 
 class Music extends PureComponent {
   constructor(props) {

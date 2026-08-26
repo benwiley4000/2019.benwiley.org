@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 
-import ProfileImage from '../components/profileimage'
 import SEO from '../components/seo'
 import { Link } from 'gatsby'
 
@@ -20,7 +19,7 @@ const IndexPage = props => (
       ]}
     />
     <h1>About Me</h1>
-    <ProfileImage right filename="ben_photo_2026.jpeg" />
+    <img className="profile_image right" src="/img/ben_photo_2026.jpeg" />
     <p style={{ fontSize: '1.2em' }}>
       I'm a programmer and musician based in Montréal, Québec.
     </p>

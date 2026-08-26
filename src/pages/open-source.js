@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 
 import SEO from '../components/seo'
 
-import ProfileImage from '../components/profileimage'
 import OpenSourceCategory from '../components/opensourcecategory'
 import opensource from '../data/opensource'
 
