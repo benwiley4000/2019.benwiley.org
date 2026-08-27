@@ -30,7 +30,7 @@ const NavBar = ({ navItems }) => (
                 : null
             }}
           >
-            {label}
+            <span className="label">{label}</span>
           </Link>
         )}
       </div>
