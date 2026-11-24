@@ -6,6 +6,7 @@ COPY . .
 RUN npm ci && \
   npm run gif-stills && \
   npm run build && \
+  chmod -R a+rX public && \
   rm -rf node_modules
 
 # We expect a mount at /out for output files!
